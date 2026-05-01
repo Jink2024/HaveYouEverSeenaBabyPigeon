@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class MouseFacer : MonoBehaviour
 {
+    private float _lastValidAngle = 0f;
+    
     void Update()
     {
         if (Mouse.current == null)
@@ -11,18 +13,22 @@ public class MouseFacer : MonoBehaviour
         
         float angle = GetAngle();
 
-        angle = ConstrainAngle(angle); 
+        // If possible angle, accept it
+        if (angle >= -90f && angle <= 90f)
+        {
+            _lastValidAngle = angle;
+        }
         
         // rotate the sprite to that angle
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        transform.rotation = Quaternion.Euler(0f, 0f, _lastValidAngle);
     }
 
     private float ConstrainAngle(float angle)
     {
-        if (angle > 265f)
-            angle = 265f;
-        if (angle < 95f)
-            angle = 95f;
+        if (angle > 90)
+            angle = 90f;
+        if (angle < -90f)
+            angle = -90f;
         
         return angle;
     }
@@ -39,7 +45,7 @@ public class MouseFacer : MonoBehaviour
         Vector2 direction = (targetPosition - transform.position).normalized; 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        angle = angle + 90f;
+        angle = angle - 90f;
         return angle;
     }
 
