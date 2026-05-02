@@ -2,5 +2,5 @@ using UnityEngine;
 
 public static class GameParameters
 {
-    public static int playerMaxHealth;
+    public static int PlayerMaxHealth = 10;
 }
