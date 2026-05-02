@@ -23,16 +23,6 @@ public class MouseFacer : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, _lastValidAngle);
     }
 
-    private float ConstrainAngle(float angle)
-    {
-        if (angle > 90)
-            angle = 90f;
-        if (angle < -90f)
-            angle = -90f;
-        
-        return angle;
-    }
-
     private float GetAngle()
     {
         Vector3 mouseWorld = GetMouseWorldPosition();
