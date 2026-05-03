@@ -9,40 +9,46 @@ using Random = UnityEngine.Random;
 
 public class BirdSpawner : MonoBehaviour
 {
-    public GameObject bird;
     public GameObject Prefab;
     private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    
     private int randomMoveCounter = 0;
     private int lastRandomDirection = 0;
-    private SpriteRenderer spriteRenderer;
+    
     bool isOkToCreate = false;
+    
     int NumberBirdsOnScreen = (int)new MaxIntParameter(GameParameters.NumberBirdsOnScreen, GameParameters.NumberBirdsOnScreen);
+    
+    private Coroutine countdownCoroutine;
     
     void Start()
     {
-        CountdownUntilCreation();
-        NumberBirdsOnScreen = 1;
+        
+    }
+    
+    void Update()
+    {
+        if (isOkToCreate = true)
+            countdownCoroutine = StartCoroutine(routine: CountdownUntilCreation());
     }
 
-    public void SpawnBird()
+    public virtual void SpawnBird()
     {
         // Spawn bird prefab (hopefully) at top of screen
         Instantiate(Prefab, SpawnTools.RandomTopOfScreenLocationWorldSpace(), Quaternion.identity);
-        if (NumberBirdsOnScreen > 1)
-        {
-            NumberBirdsOnScreen--;
-        }
-            
     }
     
     IEnumerator CountdownUntilCreation()
     {
-        isOkToCreate = true;
+        isOkToCreate = false;
       
         float secondsToWait = 5;
+        
         yield return new WaitForSeconds(secondsToWait);
-        print("checking");
+        WaitForSeconds wait = new WaitForSeconds(secondsToWait);
         SpawnBird();
+        isOkToCreate = true;
     }
     
     private void MoveRandomly()
@@ -79,18 +85,15 @@ public class BirdSpawner : MonoBehaviour
 
         randomMoveCounter = randomMoveCounter - 1;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        isOkToCreate = false;
         if (other.tag == "Bird")
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
+        isOkToCreate = true;
     }
 }
