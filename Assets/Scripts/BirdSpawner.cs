@@ -16,9 +16,9 @@ public class BirdSpawner : MonoBehaviour
     private int randomMoveCounter = 0;
     private int lastRandomDirection = 0;
     
-    bool isOkToCreate = false;
+    bool isOkToCreate = true;
     
-    int NumberBirdsOnScreen = (int)new MaxIntParameter(GameParameters.NumberBirdsOnScreen, GameParameters.NumberBirdsOnScreen);
+    int NumberBirdsOnScreen = 0;
     
     private Coroutine countdownCoroutine;
     
@@ -29,7 +29,7 @@ public class BirdSpawner : MonoBehaviour
     
     void Update()
     {
-        if (isOkToCreate = true)
+        if (isOkToCreate)
             countdownCoroutine = StartCoroutine(routine: CountdownUntilCreation());
     }
 
@@ -43,10 +43,10 @@ public class BirdSpawner : MonoBehaviour
     {
         isOkToCreate = false;
       
-        float secondsToWait = 5;
+        float secondsToWait = 2;
         
         yield return new WaitForSeconds(secondsToWait);
-        WaitForSeconds wait = new WaitForSeconds(secondsToWait);
+        
         SpawnBird();
         isOkToCreate = true;
     }
