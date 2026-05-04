@@ -43,13 +43,5 @@ public class Bird : MonoBehaviour
     }
     
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        isOkToCreate = false;
-        if (other.tag == "Bird")
-        {
-            Destroy(other.gameObject);
-        }
-        isOkToCreate = true;
-    }
+    
 }

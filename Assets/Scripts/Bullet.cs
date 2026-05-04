@@ -8,5 +8,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.tag == "Bird")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            print("Bird was hit");
+        }
     }
 }
