@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2744731280185203435}
   - component: {fileID: 3422184998505000947}
   - component: {fileID: 783529186958590732}
+  - component: {fileID: 7176832985251565345}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -166,3 +167,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &7176832985251565345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498629076179401070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b66487f22e89b4d9cfbe7dc5f7a055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bird
