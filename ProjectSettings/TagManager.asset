@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - SlotTrigger
+  serializedVersion: 3
+  tags:
+  - Bird
   layers:
   - Default
   - TransparentFX

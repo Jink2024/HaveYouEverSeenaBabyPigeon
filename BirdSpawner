@@ -1,0 +1,15 @@
+   
+public class BirdSpawner:
+
+
+
+// make bird be hit
+
+//collision
+   // if object has tag: bird
+   // destroy
+   
+
+// make bird spawn
+
+// make bird move?
