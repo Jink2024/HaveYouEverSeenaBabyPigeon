@@ -5,9 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - SlotTrigger
-  serializedVersion: 3
-  tags:
   - Bird
+  - RestPosition
   layers:
   - Default
   - TransparentFX

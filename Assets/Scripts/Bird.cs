@@ -11,11 +11,6 @@ public class Bird : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
-    public void Update()
-    {
-        MoveRandomly();
-    }
-    
     private void MoveRandomly()
     {
         int direction = lastRandomDirection;
@@ -48,9 +43,21 @@ public class Bird : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
-        //FaceCorrectDirection(direction);
+        FaceCorrectDirection(direction);
         Vector2 movementAmount = GameParameters.BirdMovementSpeed * direction * Time.deltaTime;
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);
         spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
+    }
+    
+    private void FaceCorrectDirection(Vector2 direction)
+    {
+        if (direction.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (direction.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
 }

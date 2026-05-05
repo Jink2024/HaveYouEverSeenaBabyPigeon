@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2744731280185203435}
   - component: {fileID: 3422184998505000947}
   - component: {fileID: 783529186958590732}
-  - component: {fileID: 7176832985251565345}
+  - component: {fileID: -1049433205739248640}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &7176832985251565345
+--- !u!114 &-1049433205739248640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,6 +176,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6498629076179401070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b66487f22e89b4d9cfbe7dc5f7a055, type: 3}
+  m_Script: {fileID: 11500000, guid: ac2196325c49a473eabda17d14fa9b9d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bird
+  m_EditorClassIdentifier: Assembly-CSharp::Pigeon
+  RestingPositions:
+  - {fileID: 1650092213816681140, guid: 305c11ab81fee457bb9455406efa19c0, type: 3}
+  - {fileID: 8155801040723623130, guid: bbd0f299fa6ad46d29794e084869083f, type: 3}
+  - {fileID: 2601193771736826596, guid: c544b384b0d2b43319bc4f9b29921176, type: 3}
+  - {fileID: 1909973424995087698, guid: c902bdcabd6bb41829bee128ccf43a12, type: 3}
+  - {fileID: 1840058516975463235, guid: 5976e1f8229094fe9acbf01dd15eb5d6, type: 3}
