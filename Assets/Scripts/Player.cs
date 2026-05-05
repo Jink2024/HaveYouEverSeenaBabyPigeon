@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         // Useless for now, could be used later.
         // FaceCorrectDirection(direction);
         
-        Vector2 movementAmount = direction * (10 * Time.deltaTime); // Add in GameParameters later
+        Vector2 movementAmount = direction * (GameParameters.PlayerMovementSpeed * Time.deltaTime);
         
         spriteRenderer.transform.Translate(movementAmount.x,0,0);
 

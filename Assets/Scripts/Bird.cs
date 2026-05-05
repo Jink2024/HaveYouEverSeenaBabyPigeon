@@ -5,7 +5,6 @@ public class Bird : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private int randomMoveCounter = 0;
     private int lastRandomDirection;
-    bool isOkToCreate = true;
 
     public void Start()
     {
@@ -54,7 +53,4 @@ public class Bird : MonoBehaviour
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);
         spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
     }
-    
-
-    
 }

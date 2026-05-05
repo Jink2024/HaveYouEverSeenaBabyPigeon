@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        if (other.tag == "Bird")
+        if (other.CompareTag("Bird"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
