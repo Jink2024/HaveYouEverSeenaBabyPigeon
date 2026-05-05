@@ -1,21 +1,10 @@
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Health
 {
-    public int currentHealth;
-
-    public void Start()
+    void Start()
     {
-        currentHealth = GameParameters.PlayerMaxHealth;
-    }
-    
-    public int GetHealth()
-    {
-        return currentHealth;
-    }
-    
-    public void TakeDamage(int damage = 1)
-    {
-        currentHealth -= damage;
+        MaxHealth = GameParameters.PlayerMaxHealth;
+        base.Start();
     }
 }

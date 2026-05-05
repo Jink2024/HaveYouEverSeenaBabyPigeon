@@ -9,4 +9,6 @@ public static class GameParameters
     public static float BirdMovementSpeed = 10f;
     public static float BulletMovementSpeed = 10f;
     public static float PlayerMovementSpeed = 10f;
+
+    public static int PigeonMaxHealth = 2;
 }
