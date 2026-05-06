@@ -11,6 +11,7 @@ public class Bird : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
+    
     public void Update()
     {
         MoveRandomly();
