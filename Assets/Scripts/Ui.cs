@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
     public CanvasGroup StartScreenPanelCanvasGroup;
     public CanvasGroup GameOverPanelCanvasGroup;
     
-    public void SetScoreText(int score)
+    public void SetScoreText(string score)
     {
         scoreText.text = "Score: " + score;
     }

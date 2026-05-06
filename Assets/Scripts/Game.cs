@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem.HID;
 
 public class Game : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Game : MonoBehaviour
     {
         Ui.HideGameOverScreenPanel();
         Ui.ShowStartScreenPanel();
+        Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
     }
 
     void Update()
@@ -19,6 +21,7 @@ public class Game : MonoBehaviour
 
     public void OnStartButtonClicked()
     {
+        print("OnStartButtonClicked");
         Ui.HideStartScreenPanel();
         InitializeGame();
     }

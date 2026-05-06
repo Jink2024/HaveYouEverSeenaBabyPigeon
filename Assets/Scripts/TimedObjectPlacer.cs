@@ -13,8 +13,11 @@ public class TimedObjectPlacer : MonoBehaviour
     private bool isOkToCreate = true;
     public bool isActive = true; // Change if we want to use StartPlacing
     private Coroutine countdownCoroutine;
+    public Game Game;
     void Update()
     {
+        //if (Game.isGameRunning == false)
+            //return;
         if (!isActive)
             return;
         if (isOkToCreate)
@@ -64,4 +67,5 @@ public class TimedObjectPlacer : MonoBehaviour
     {
         Instantiate(Prefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
     }
+    
 }

@@ -1,9 +1,11 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public static class ScoreKeeper
 {
-    private static int score = 0;
+    public static int score = 0;
+    private static TextMeshPro scoreTextMeshPro;
     
     public static void AddPoint()
     {
