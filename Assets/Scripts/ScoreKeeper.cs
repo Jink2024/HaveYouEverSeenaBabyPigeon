@@ -1,10 +1,11 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class ScoreKeeper
 {
-    public static int score = 0;
+    private static int score = 0;
     private static TextMeshPro scoreTextMeshPro;
     
     public static void AddPoint()
@@ -20,5 +21,10 @@ public static class ScoreKeeper
     public static int GetScore()
     {
         return score;
+    }
+    
+    public static string GetScoreAsString()
+    {
+        return score.ToString();
     }
 }

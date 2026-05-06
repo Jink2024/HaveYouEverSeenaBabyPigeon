@@ -14,6 +14,7 @@ public class TimedObjectPlacer : MonoBehaviour
     public bool isActive = true; // Change if we want to use StartPlacing
     private Coroutine countdownCoroutine;
     public Game Game;
+    
     void Update()
     {
         //if (Game.isGameRunning == false)

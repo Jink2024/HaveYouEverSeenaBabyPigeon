@@ -9,8 +9,8 @@ public class MouseLauncher : MonoBehaviour
     
     void Update()
     {
-        //if (Game.isGameRunning == false)
-            //return;
+        if (Game.isGameRunning == false)
+            return;
         
         if (Mouse.current == null)
             return;

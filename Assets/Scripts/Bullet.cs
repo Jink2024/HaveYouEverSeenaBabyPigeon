@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    private UI ui;
+
+    public void Awake()
+    {
+        ui = FindObjectOfType<UI>();
+    }
     
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,7 +20,7 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
             ScoreKeeper.AddPoint();
-            ScoreKeeper.score = ScoreKeeper.score + 1;
+            ui.SetScoreText(ScoreKeeper.GetScoreAsString());
             print("Bird was hit");
         }
     }

@@ -7,23 +7,19 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
 
-public class BirdSpawner : MonoBehaviour
+public class BirdSpawner : TimedObjectPlacer
 {
-    public Game Game;
     // public Sounds Sounds;
-    public GameObject Prefab;
-    private float minimumSecondsToWait;
-    private float maximumSecondsToWait;
     
     void Start()
     {
-        //if (Game.isGameRunning == false)
-            //return;
+        if (Game.isGameRunning == false)
+            return;
         Place();
 
     }
 
-     public void Place()
+     public override void Place()
     {
         minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
         maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
