@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2744731280185203435}
   - component: {fileID: 3422184998505000947}
   - component: {fileID: 783529186958590732}
-  - component: {fileID: -7350491147470318441}
+  - component: {fileID: -4468738583441001892}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &-7350491147470318441
+--- !u!114 &-4468738583441001892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

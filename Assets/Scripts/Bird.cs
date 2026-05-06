@@ -32,9 +32,14 @@ public class Bird : MonoBehaviour
         FaceCorrectDirection(direction);
         Vector2 movementAmount = GameParameters.BirdMovementSpeed * direction * Time.deltaTime;
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);
-        spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
+        AddScreenConstraints();
     }
-    
+
+    public virtual void AddScreenConstraints()
+    {
+        if (!isLeaving) spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
+    }
+
     private void FaceCorrectDirection(Vector2 direction)
     {
         if (direction.x > 0)
