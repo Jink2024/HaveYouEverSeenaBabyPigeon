@@ -1,48 +1,34 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    private int randomMoveCounter = 0;
-    private int lastRandomDirection;
+    private bool isLeaving = false;
 
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        StartCoroutine(RemainOnScreenCountdown());
     }
-    
-    private void MoveRandomly()
+
+    public virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        int direction = lastRandomDirection;
-        
-        if (randomMoveCounter == 0)
+        if (collision.gameObject.CompareTag("SlotTrigger"))
         {
-            direction = Random.Range(0, 4);
-            lastRandomDirection = direction;
-            randomMoveCounter = Random.Range(20, 69);
+            Destroy(gameObject);
         }
-        
-        switch  (direction)
-        {
-            case 0:
-                Move(Vector2.right);
-                break;
-            case 1:
-                Move(Vector2.left);
-                break;
-            case 2:
-                Move(Vector2.up);
-                break;
-            case 3:
-                Move(Vector2.down);
-                break;
-        }
-        
-        randomMoveCounter--;
+    }
+
+    public IEnumerator RemainOnScreenCountdown()
+    {
+        yield return new WaitForSeconds(GameParameters.BirdExistTimeInSeconds);
+        isLeaving = true;
     }
 
     public void Move(Vector2 direction)
     {
+        if (isLeaving) direction.y = 1;
         FaceCorrectDirection(direction);
         Vector2 movementAmount = GameParameters.BirdMovementSpeed * direction * Time.deltaTime;
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);

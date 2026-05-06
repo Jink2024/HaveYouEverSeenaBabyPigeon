@@ -10,5 +10,6 @@ public static class GameParameters
     public static float BulletMovementSpeed = 10f;
     public static float PlayerMovementSpeed = 10f;
 
-    public static float PigeonRestTimeInSeconds = 5f;
+    public static float PigeonRestTimeInSeconds = 1.5f;
+    public static float BirdExistTimeInSeconds = 5f;
 }
