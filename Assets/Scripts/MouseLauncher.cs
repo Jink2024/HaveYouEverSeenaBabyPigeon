@@ -5,11 +5,14 @@ public class MouseLauncher : MonoBehaviour
 {
     public Launcher Launcher;
     public Sounds Sounds;
+    public Game Game;
     
     void Update()
     {
         if (Mouse.current == null)
             return;
+        //if (Game.isGameRunning == false)
+          //  return;
         
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
