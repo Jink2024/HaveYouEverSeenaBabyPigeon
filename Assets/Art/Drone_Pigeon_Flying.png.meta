@@ -1,19 +1,28 @@
 fileFormatVersion: 2
-guid: b007f1362b07244eda00c4dbe61c838e
+guid: f578d31c584f44bc789e92fa268263c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6096495147091929107
-    second: Drone_Hummingbird_Flying_0
+      213: -5828984425339396234
+    second: Drone_Pigeon_Flying_0
   - first:
-      213: -2977118597177724540
-    second: Drone_Hummingbird_Flying_1
+      213: 2533949365255107919
+    second: Drone_Pigeon_Flying_1
   - first:
-      213: 6183084257028079076
-    second: Drone_Hummingbird_Flying_2
+      213: 4403040804404433439
+    second: Drone_Pigeon_Flying_2
   - first:
-      213: 4661128049242130889
-    second: Drone_Hummingbird_Flying_3
+      213: 1016022697715135227
+    second: Drone_Pigeon_Flying_3
+  - first:
+      213: -7658333935670328013
+    second: Drone_Pigeon_Flying_4
+  - first:
+      213: -5301068484338446238
+    second: Drone_Pigeon_Flying_5
+  - first:
+      213: -458209760791020506
+    second: Drone_Pigeon_Flying_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,7 +92,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -109,89 +118,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drone_Hummingbird_Flying_0
+      name: Drone_Pigeon_Flying_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 9
+        y: 202
+        width: 86
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de751bed6f5e46ba0800000000000000
-      internalID: -6096495147091929107
+      spriteID: 67f5c566c894b1fa0800000000000000
+      internalID: -5828984425339396234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drone_Hummingbird_Flying_1
+      name: Drone_Pigeon_Flying_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 109
+        y: 201
+        width: 86
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4813309c8662fa6d0800000000000000
-      internalID: -2977118597177724540
+      spriteID: f457bd2b5856a2320800000000000000
+      internalID: 2533949365255107919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drone_Hummingbird_Flying_2
+      name: Drone_Pigeon_Flying_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 9
+        y: 136
+        width: 86
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4edf7745f5abec550800000000000000
-      internalID: 6183084257028079076
+      spriteID: f129316884eba1d30800000000000000
+      internalID: 4403040804404433439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drone_Hummingbird_Flying_3
+      name: Drone_Pigeon_Flying_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 109
+        y: 137
+        width: 86
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c9cfabd347afa040800000000000000
-      internalID: 4661128049242130889
+      spriteID: bf27b0da243a91e00800000000000000
+      internalID: 1016022697715135227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drone_Pigeon_Flying_4
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 69
+        width: 86
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3350d017cd128b590800000000000000
+      internalID: -7658333935670328013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drone_Pigeon_Flying_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 65
+        width: 86
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2601dfcbc42de66b0800000000000000
+      internalID: -5301068484338446238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drone_Pigeon_Flying_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1
+        width: 86
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c3f6776ac14a9f0800000000000000
+      internalID: -458209760791020506
       vertices: []
       indices: 
       edges: []
@@ -200,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a1b97b93867f64976afcb4245596900d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -208,14 +283,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Drone_Hummingbird_Flying_0: -6096495147091929107
-      Drone_Hummingbird_Flying_1: -2977118597177724540
-      Drone_Hummingbird_Flying_2: 6183084257028079076
-      Drone_Hummingbird_Flying_3: 4661128049242130889
+      Drone_Pigeon_Flying_0: -5828984425339396234
+      Drone_Pigeon_Flying_1: 2533949365255107919
+      Drone_Pigeon_Flying_2: 4403040804404433439
+      Drone_Pigeon_Flying_3: 1016022697715135227
+      Drone_Pigeon_Flying_4: -7658333935670328013
+      Drone_Pigeon_Flying_5: -5301068484338446238
+      Drone_Pigeon_Flying_6: -458209760791020506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
