@@ -732,6 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   currentHealth: 10
+  MaxHealth: 0
 --- !u!114 &570051806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   Sounds: {fileID: 1850336505}
+  Game: {fileID: 1184874487}
 --- !u!212 &570051807
 SpriteRenderer:
   serializedVersion: 2
@@ -1671,7 +1673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game
   Ui: {fileID: 197762059}
-  isGameRunning: 0
   BirdSpawner: {fileID: 2069874987}
 --- !u!4 &1184874488
 Transform:

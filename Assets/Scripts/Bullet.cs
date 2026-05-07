@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
             PigeonHealth pigeonHealth = other.GetComponent<PigeonHealth>();
             
             pigeonHealth.TakeDamage();
+            other.GetComponent<SpriteRenderer>().color = Color.red;
             
             if (pigeonHealth.GetHealth() == 0)
             {

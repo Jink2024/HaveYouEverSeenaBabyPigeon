@@ -10,7 +10,7 @@ public class MouseLauncher : MonoBehaviour
     private float _lastFireTime = -Mathf.Infinity;
     void Update()
     {
-        if (Game.isGameRunning == false)
+        if (!Game.IsGameRunning())
             return;
         
         if (Mouse.current == null)

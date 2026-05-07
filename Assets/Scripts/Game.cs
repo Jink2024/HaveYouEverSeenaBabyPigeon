@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.HID;
 public class Game : MonoBehaviour
 {
     public UI Ui;
-    public bool isGameRunning = false;
+    private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
     
     void Start()
@@ -50,7 +50,7 @@ public class Game : MonoBehaviour
     {
         BirdSpawner.StopPlacing();
     }
-    public bool isPlaying()
+    public bool IsGameRunning()
     {
         return isGameRunning;
     }

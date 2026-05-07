@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class Player : MonoBehaviour
 {
     public Sounds Sounds;
-
+    public Game Game;
     private SpriteRenderer spriteRenderer;
     
 
@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     
     public void MoveManually(Vector2 direction)
     {
+        if (!Game.IsGameRunning())
+            return;
         Move(direction);
     }
 
