@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3422184998505000947}
   - component: {fileID: 783529186958590732}
   - component: {fileID: -4468738583441001892}
+  - component: {fileID: -62964181356419799}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -185,3 +186,17 @@ MonoBehaviour:
   - {fileID: 2601193771736826596, guid: c544b384b0d2b43319bc4f9b29921176, type: 3}
   - {fileID: 1909973424995087698, guid: c902bdcabd6bb41829bee128ccf43a12, type: 3}
   - {fileID: 1840058516975463235, guid: 5976e1f8229094fe9acbf01dd15eb5d6, type: 3}
+--- !u!114 &-62964181356419799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498629076179401070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cd5bb1284d7354ba1419531ca560ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
+  currentHealth: 0
+  MaxHealth: 0
