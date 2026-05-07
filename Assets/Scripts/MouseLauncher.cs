@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class MouseLauncher : MonoBehaviour
 {
     public Launcher Launcher;
-    public Sounds Sounds;
     public Game Game;
     
     private float _lastFireTime = -Mathf.Infinity;
@@ -33,8 +32,6 @@ public class MouseLauncher : MonoBehaviour
         
         // figure out the direction to aim
         Vector2 aimDirection = GetAimDirection();
-        
-        Sounds.PlayGunSound();
         
         // Launch in that direction
         Launcher.Launch(aimDirection);
