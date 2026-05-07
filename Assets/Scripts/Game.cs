@@ -38,7 +38,6 @@ public class Game : MonoBehaviour
     {
         isGameRunning = true;
         StartPlacers();
-        //ScoreKeeper.ResetScore();
         Ui.ResetScore();
         Ui.ResetHealth();
     }

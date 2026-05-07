@@ -20,7 +20,7 @@ public class UI : MonoBehaviour
 
     public void ResetHealth()
     {
-        healthText.text = "Health: 5/5";
+        healthText.text = "Health: 10/10";
     }
 
     public void ResetScore()
