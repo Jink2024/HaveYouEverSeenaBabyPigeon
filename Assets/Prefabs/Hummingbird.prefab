@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2950256905535603187}
   - component: {fileID: 4501833072676469037}
   - component: {fileID: 5581814467359035051}
-  - component: {fileID: 4779122929645053581}
   - component: {fileID: 3949887912733357382}
+  - component: {fileID: 3290742600803568745}
   m_Layer: 0
   m_Name: Hummingbird
   m_TagString: Bird
@@ -168,20 +168,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &4779122929645053581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089133939593507800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67cd5bb1284d7354ba1419531ca560ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
-  currentHealth: 0
-  MaxHealth: 0
 --- !u!114 &3949887912733357382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +180,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb529fc1016e043bfac1705fc8d03e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hummingbird
+--- !u!114 &3290742600803568745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089133939593507800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d1cfb37cb86409d9349d6d7f76f469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HummingbirdHealth
+  currentHealth: 0
+  MaxHealth: 0

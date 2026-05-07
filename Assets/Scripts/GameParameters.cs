@@ -13,6 +13,9 @@ public static class GameParameters
     public static float PlayerMovementSpeed = 10f;
 
     public static int PigeonMaxHealth = 2;
+    public static int PenguinMaxHealth = 2;
+    public static int HummingbirdMaxHealth = 1;
+    public static int OstrichMaxHealth = 3;
 
     public static float PigeonRestTimeInSeconds = 1.5f;
     public static float BirdExistTimeInSeconds = 5f;

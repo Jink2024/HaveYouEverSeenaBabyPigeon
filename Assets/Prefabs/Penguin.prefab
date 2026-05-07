@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7916927529393573358}
   - component: {fileID: 3228284286773732408}
   - component: {fileID: 8810545329634641495}
-  - component: {fileID: 5695534979881818462}
   - component: {fileID: 107360849878858073}
+  - component: {fileID: -4760923732576638916}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Bird
@@ -168,20 +168,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5695534979881818462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8893520726216244716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67cd5bb1284d7354ba1419531ca560ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
-  currentHealth: 0
-  MaxHealth: 0
 --- !u!114 &107360849878858073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +180,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3890df7e6394e73abea801d7aa26c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Penguin
+--- !u!114 &-4760923732576638916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893520726216244716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6437cd48377414626b5f3d9066a7bb6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PenguinHealth
+  currentHealth: 0
+  MaxHealth: 0
