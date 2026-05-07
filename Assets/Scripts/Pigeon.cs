@@ -9,24 +9,38 @@ public class Pigeon : Bird
     private bool isMoving = true;
     private Transform newRestingPosition;
     private Coroutine restingCountdownCoroutine;
+    private const float ArrivalDistance = 0.1f;
 
     public void Update()
     {
-        if (isMoving) MoveTowardsRestingPosition();
-    }
-
-    public override void OnTriggerEnter2D(Collider2D collision)
-    {
-        base.OnTriggerEnter2D(collision);
-
-        if (collision.gameObject.CompareTag("RestPosition") &&
-            (collision.gameObject.transform.position == newRestingPosition.position))
+        if (isMoving)
         {
-            if (restingCountdownCoroutine != null) StopCoroutine(restingCountdownCoroutine);
-            StartCoroutine(RestingCountdown());
+            MoveTowardsRestingPosition();
+            CheckArrival();
+        }
+    }
+    
+    private void CheckArrival()
+    {
+        if (newRestingPosition == null) return;
+
+        float distance =
+            Vector2.Distance(
+                transform.position,
+                newRestingPosition.position
+            );
+
+        if (distance < ArrivalDistance)
+        {
+            if (restingCountdownCoroutine != null)
+                StopCoroutine(restingCountdownCoroutine);
+
+            restingCountdownCoroutine =
+                StartCoroutine(RestingCountdown());
         }
     }
 
+    
     private void MoveTowardsRestingPosition()
     {
         Vector2 direction = GetMovementDirection();
@@ -35,9 +49,11 @@ public class Pigeon : Bird
 
     private Vector2 GetMovementDirection()
     {
-        if (newRestingPosition ==null) newRestingPosition = GetRandomRestingPositionLocation();
-        Vector2 moveDirection = new Vector2((newRestingPosition.position.x - transform.position.x), (newRestingPosition.position.y - transform.position.y)).normalized;
-        return moveDirection;
+        if (newRestingPosition ==null) 
+            newRestingPosition = GetRandomRestingPositionLocation();
+        
+        Vector2 moveDirection = newRestingPosition.position - transform.position;
+        return moveDirection.normalized;
     }
 
     private Transform GetRandomRestingPositionLocation()
