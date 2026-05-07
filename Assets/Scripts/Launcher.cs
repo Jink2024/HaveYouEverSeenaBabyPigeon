@@ -6,7 +6,8 @@ public class Launcher : MonoBehaviour
     [SerializeField] private Transform weaponHolder;
     
     public Weapon CurrentWeapon;
-    
+    private float _lastFireTime = -Mathf.Infinity;
+
     private void Awake()
     {
         EquipWeapon(bulletGunPrefab);
@@ -14,10 +15,17 @@ public class Launcher : MonoBehaviour
 
     public void Launch(Vector2 aimDirection)
     {
-        if (CurrentWeapon == null)
+        if (CurrentWeapon == null || !CanFire())
             return;
-
+        
+        _lastFireTime = Time.time;
+        
         CurrentWeapon.Shoot(aimDirection);
+    }
+    
+    private bool CanFire()
+    {
+        return Time.time >= _lastFireTime + CurrentWeapon.FireCooldown;
     }
     
     public void EquipWeapon(GameObject weaponPrefab)

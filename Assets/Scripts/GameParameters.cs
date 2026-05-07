@@ -11,7 +11,8 @@ public static class GameParameters
     public static int BulletDamage = 1;
     public static float LaserMovementSpeed = 20f;
     public static int LaserDamage = 2;
-    public static float FireCooldown = 0.5f;
+    public static float BulletFireCooldown = 0.5f;
+    public static float LaserFireCooldown = 0.1f;
 
     public static float PlayerMovementSpeed = 10f;
 

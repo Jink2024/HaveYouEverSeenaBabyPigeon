@@ -6,7 +6,6 @@ public class MouseLauncher : MonoBehaviour
     public Launcher Launcher;
     public Game Game;
     
-    private float _lastFireTime = -Mathf.Infinity;
     void Update()
     {
         if (!Game.IsGameRunning())
@@ -15,20 +14,16 @@ public class MouseLauncher : MonoBehaviour
         if (Mouse.current == null)
             return;
         
-        if (Mouse.current.leftButton.wasPressedThisFrame && CanFire())
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             Launch();
         }
     }
     
-    private bool CanFire()
-    {
-        return Time.time >= _lastFireTime + GameParameters.FireCooldown;
-    }
+    
 
     private void Launch()
     {
-        _lastFireTime = Time.time;
         
         // figure out the direction to aim
         Vector2 aimDirection = GetAimDirection();

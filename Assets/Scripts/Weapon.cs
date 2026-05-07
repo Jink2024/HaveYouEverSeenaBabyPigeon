@@ -6,7 +6,7 @@ public abstract class Weapon : MonoBehaviour
     [SerializeField] protected Transform projectileSpawnPoint;
     [SerializeField] protected AudioClip shootSound;
     [SerializeField] protected AudioSource audioSource;
-    
+    public virtual float FireCooldown => GameParameters.BulletFireCooldown;
     public virtual void Shoot(Vector2 aimDirection)
     {
         audioSource.PlayOneShot(shootSound);
