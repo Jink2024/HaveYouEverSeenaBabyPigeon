@@ -6,7 +6,8 @@ public class Game : MonoBehaviour
 {
     public UI Ui;
     public bool isGameRunning = false;
-
+    public BirdSpawner BirdSpawner;
+    
     void Start()
     {
         Ui.HideGameOverScreenPanel();
@@ -35,8 +36,22 @@ public class Game : MonoBehaviour
     public void InitializeGame()
     {
         isGameRunning = true;
+        StartPlacers();
         ScoreKeeper.ResetScore();
         Ui.ResetScore();
     }
 
+    private void StartPlacers()
+    {
+        BirdSpawner.StartPlacing();
+    }
+
+    private void StopPlacers()
+    {
+        BirdSpawner.StopPlacing();
+    }
+    public bool isPlaying()
+    {
+        return isGameRunning;
+    }
 }

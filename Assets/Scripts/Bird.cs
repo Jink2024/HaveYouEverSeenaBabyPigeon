@@ -42,7 +42,7 @@ public class Bird : MonoBehaviour
 
     private void FaceCorrectDirection(Vector2 direction)
     {
-        if (direction.x > 0)
+        if (direction.x >= 0)
         {
             spriteRenderer.flipX = false;
         }

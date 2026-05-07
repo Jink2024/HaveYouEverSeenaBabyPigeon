@@ -11,21 +11,10 @@ public class BirdSpawner : TimedObjectPlacer
 {
     // public Sounds Sounds;
     
-    void Start()
-    {
-        if (Game.isGameRunning == false)
-            return;
-        Place();
-
-    }
-
-     public override void Place()
+    public void Start()
     {
         minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
         maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
-        
-        Instantiate(Prefab, SpawnTools.RandomTopOfScreenLocationWorldSpace(), Quaternion.identity);
-        // Sounds.PlayFallingSound();
     }
     
 }

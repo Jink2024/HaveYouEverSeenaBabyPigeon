@@ -11,14 +11,11 @@ public class TimedObjectPlacer : MonoBehaviour
     public float maximumSecondsToWait;
     
     private bool isOkToCreate = true;
-    public bool isActive = true; // Change if we want to use StartPlacing
+    public bool isActive = false;
     private Coroutine countdownCoroutine;
-    public Game Game;
     
     void Update()
     {
-        //if (Game.isGameRunning == false)
-            //return;
         if (!isActive)
             return;
         if (isOkToCreate)
