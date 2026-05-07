@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PigeonHealth : Health
 {
-    void Start()
+    public new void Start()
     {
         MaxHealth = GameParameters.PigeonMaxHealth;
         base.Start();

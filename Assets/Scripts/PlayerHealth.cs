@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
-    void Start()
+    public new void Start()
     {
         MaxHealth = GameParameters.PlayerMaxHealth;
         base.Start();
