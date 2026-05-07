@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
     public UI Ui;
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
+    public SpecialBirdSpawner SpecialBirdSpawner;
     
     void Start()
     {
@@ -44,11 +45,13 @@ public class Game : MonoBehaviour
     private void StartPlacers()
     {
         BirdSpawner.StartPlacing();
+        SpecialBirdSpawner.StartPlacing();
     }
 
     private void StopPlacers()
     {
         BirdSpawner.StopPlacing();
+        SpecialBirdSpawner.StopPlacing();
     }
     public bool IsGameRunning()
     {

@@ -10,17 +10,17 @@ public class TimedObjectPlacer : MonoBehaviour
     public float minimumSecondsToWait;
     public float maximumSecondsToWait;
     
-    private bool isOkToCreate = true;
+    public bool isOkToCreate = true;
     public bool isActive = false;
-    private Coroutine countdownCoroutine;
+    public Coroutine countdownCoroutine;
     
-    void Update()
+    public virtual void Update()
     {
         if (!isActive)
             return;
         if (isOkToCreate)
         {
-            countdownCoroutine = StartCoroutine(CoundownUntilCreation());
+            countdownCoroutine = StartCoroutine(CountdownUntilCreation());
         }
     }
     
@@ -50,7 +50,7 @@ public class TimedObjectPlacer : MonoBehaviour
         }
     }
 
-    IEnumerator CoundownUntilCreation()
+    public virtual IEnumerator CountdownUntilCreation()
     {
         isOkToCreate = false;
         

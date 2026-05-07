@@ -1674,6 +1674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game
   Ui: {fileID: 197762059}
   BirdSpawner: {fileID: 2069874987}
+  SpecialBirdSpawner: {fileID: 2069874989}
 --- !u!4 &1184874488
 Transform:
   m_ObjectHideFlags: 0
@@ -2365,6 +2366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069874988}
   - component: {fileID: 2069874987}
+  - component: {fileID: 2069874989}
   m_Layer: 0
   m_Name: BirdSpawner
   m_TagString: Untagged
@@ -2387,6 +2389,7 @@ MonoBehaviour:
   Prefab: {fileID: 6498629076179401070, guid: b9fd8beb3aee540b6ad89c2c9f98c86d, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
+  isOkToCreate: 1
   isActive: 0
 --- !u!4 &2069874988
 Transform:
@@ -2403,6 +2406,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069874989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069874986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecf5d0418d58a4cfabcbcbf7c04fa301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialBirdSpawner
+  Prefab: {fileID: 0}
+  minimumSecondsToWait: 0
+  maximumSecondsToWait: 0
+  isOkToCreate: 1
+  isActive: 0
+  RealPigeonPrefab: {fileID: 3532720771021030234, guid: 28c408da1d2c143f6877a52f55664018, type: 3}
+  PenguinPrefab: {fileID: 8893520726216244716, guid: 3391ec8df118749a49951beab1e04a35, type: 3}
+  HummingbirdPrefab: {fileID: 3089133939593507800, guid: 35393125d2e964a08ac7e8356fbc9cbe, type: 3}
+  OstrichPrefab: {fileID: 3553860153383404590, guid: af2afa0f9fe2a4846b469900f4bd5c79, type: 3}
+  AvailableSpecialBirdPrefabs:
+  - {fileID: 3532720771021030234, guid: 28c408da1d2c143f6877a52f55664018, type: 3}
+  - {fileID: 8893520726216244716, guid: 3391ec8df118749a49951beab1e04a35, type: 3}
+  - {fileID: 3089133939593507800, guid: 35393125d2e964a08ac7e8356fbc9cbe, type: 3}
+  - {fileID: 3553860153383404590, guid: af2afa0f9fe2a4846b469900f4bd5c79, type: 3}
 --- !u!1001 &747996736510220715
 PrefabInstance:
   m_ObjectHideFlags: 0
