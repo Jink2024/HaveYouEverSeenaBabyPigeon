@@ -4,12 +4,23 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     public TMP_Text scoreText;
+    public TMP_Text healthText;
     public CanvasGroup StartScreenPanelCanvasGroup;
     public CanvasGroup GameOverPanelCanvasGroup;
     
     public void SetScoreText(string score)
     {
         scoreText.text = "Score: " + score;
+    }
+
+    public void SetHealthText(string health)
+    {
+        healthText.text = $"Health: {health}/10";
+    }
+
+    public void ResetHealth()
+    {
+        healthText.text = "Health: 5/5";
     }
 
     public void ResetScore()

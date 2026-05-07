@@ -12,7 +12,8 @@ public class Game : MonoBehaviour
     {
         Ui.HideGameOverScreenPanel();
         Ui.ShowStartScreenPanel();
-        Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
+        // Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
+        Ui.ResetHealth();
     }
 
     void Update()
@@ -37,8 +38,9 @@ public class Game : MonoBehaviour
     {
         isGameRunning = true;
         StartPlacers();
-        ScoreKeeper.ResetScore();
+        //ScoreKeeper.ResetScore();
         Ui.ResetScore();
+        Ui.ResetHealth();
     }
 
     private void StartPlacers()
