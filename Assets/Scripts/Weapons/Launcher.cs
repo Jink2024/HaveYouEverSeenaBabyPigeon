@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class Launcher : MonoBehaviour
 {
-    [SerializeField] private GameObject bulletGunPrefab;
     [SerializeField] private Transform weaponHolder;
+    [SerializeField] private GameObject defaultWeaponPrefab;
     
     public Weapon CurrentWeapon;
     private float _lastFireTime = -Mathf.Infinity;
 
     private void Awake()
     {
-        EquipWeapon(bulletGunPrefab);
+        EquipWeapon(defaultWeaponPrefab);
+    }
+    
+    public void EquipDefaultWeapon()
+    {
+        EquipWeapon(defaultWeaponPrefab);
     }
 
     public void Launch(Vector2 aimDirection)

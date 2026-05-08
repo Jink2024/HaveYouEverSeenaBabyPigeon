@@ -42,6 +42,12 @@ public abstract class Projectile : MonoBehaviour
             
             if (health.GetHealth() <= 0)
             {
+                BirdLoot birdLoot = other.GetComponent<BirdLoot>();
+                if (birdLoot != null)
+                {
+                    birdLoot.DropLoot();
+                }
+                
                 Destroy(other.gameObject);
                 ScoreKeeper.AddPoint();
                 ui.SetScoreText(ScoreKeeper.GetScoreAsString());

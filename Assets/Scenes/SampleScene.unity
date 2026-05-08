@@ -759,9 +759,12 @@ GameObject:
   - component: {fileID: 570051810}
   - component: {fileID: 570051809}
   - component: {fileID: 570051811}
+  - component: {fileID: 570051814}
+  - component: {fileID: 570051813}
+  - component: {fileID: 570051812}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -881,8 +884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f2ce6697cf44c4999a63d2c029c35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Launcher
-  bulletGunPrefab: {fileID: 3922717976736465486, guid: c0ad1a76724d9ae4291dffbbe26a8824, type: 3}
   weaponHolder: {fileID: 250389575}
+  defaultWeaponPrefab: {fileID: 2327121769062867653, guid: 0e2b14c8f2834ae4eaf7fbe90cae6464, type: 3}
   CurrentWeapon: {fileID: 0}
 --- !u!114 &570051810
 MonoBehaviour:
@@ -995,6 +998,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!50 &570051812
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570051804}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!70 &570051813
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570051804}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5.34, y: 6.76}
+  m_Direction: 0
+--- !u!114 &570051814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570051804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a768a5a1fa67a45bd167ad7b8893b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpManager
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,11 +2512,6 @@ MonoBehaviour:
   PenguinPrefab: {fileID: 8893520726216244716, guid: 3391ec8df118749a49951beab1e04a35, type: 3}
   HummingbirdPrefab: {fileID: 3089133939593507800, guid: 35393125d2e964a08ac7e8356fbc9cbe, type: 3}
   OstrichPrefab: {fileID: 3553860153383404590, guid: af2afa0f9fe2a4846b469900f4bd5c79, type: 3}
-  AvailableSpecialBirdPrefabs:
-  - {fileID: 3532720771021030234, guid: 28c408da1d2c143f6877a52f55664018, type: 3}
-  - {fileID: 8893520726216244716, guid: 3391ec8df118749a49951beab1e04a35, type: 3}
-  - {fileID: 3089133939593507800, guid: 35393125d2e964a08ac7e8356fbc9cbe, type: 3}
-  - {fileID: 3553860153383404590, guid: af2afa0f9fe2a4846b469900f4bd5c79, type: 3}
 --- !u!1001 &747996736510220715
 PrefabInstance:
   m_ObjectHideFlags: 0

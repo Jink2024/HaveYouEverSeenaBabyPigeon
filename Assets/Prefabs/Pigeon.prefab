@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 783529186958590732}
   - component: {fileID: -4468738583441001892}
   - component: {fileID: -62964181356419799}
+  - component: {fileID: 4189792748074240885}
   m_Layer: 0
   m_Name: Pigeon
   m_TagString: Bird
@@ -200,3 +201,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
   currentHealth: 0
   MaxHealth: 0
+--- !u!114 &4189792748074240885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498629076179401070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3e3bedb33cc7043be7eaccc57061fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
+  lootPrefab: {fileID: 6632196940697658179, guid: fa81395583dfcdd4695c76288b90f00b, type: 3}
+  dropChance: 1
