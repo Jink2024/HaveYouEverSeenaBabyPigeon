@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Sounds Sounds;
     public Game Game;
     private SpriteRenderer spriteRenderer;
+    public Animator animator;
     
 
     public void Awake()

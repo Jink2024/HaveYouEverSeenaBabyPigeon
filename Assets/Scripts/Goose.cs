@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class Goose : MonoBehaviour
+public class Goose : TimedObjectPlacer
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Bird Bird;
+    
     void Start()
     {
-        
+        minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
+        maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        //Bird.Move(Vector2.down);
     }
 }

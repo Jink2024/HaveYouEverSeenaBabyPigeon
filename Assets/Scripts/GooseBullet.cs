@@ -20,6 +20,7 @@ public class GooseBullet : MonoBehaviour
     
     if (other.CompareTag("Player"))
     {
+      Destroy(gameObject);
       other.GetComponent<Health>().TakeDamage();
       //      Ui.SetHealthText(Ui.healthText.text = $"Health: {Health.currentHealth}");
       Ui.SetHealthText(Health.HealthAsString());
@@ -29,6 +30,12 @@ public class GooseBullet : MonoBehaviour
     else if (other.CompareTag("DestroyBox"))
     {
       Destroy(gameObject);
+    }
+    
+    else if (other.CompareTag("Bird"))
+    {
+      Destroy(gameObject);
+      return;
     }
   }
   

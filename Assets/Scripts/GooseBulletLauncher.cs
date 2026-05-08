@@ -24,7 +24,7 @@ public class GooseBulletLauncher : MonoBehaviour
     
     private bool CanFire()
     {
-        return Time.time >= _lastFireTime + GameParameters.FireCooldown;
+        return Time.time >= _lastFireTime + GameParameters.GooseFireCooldown;
     }
 
     private void Launch()
