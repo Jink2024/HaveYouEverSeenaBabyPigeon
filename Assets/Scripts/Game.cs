@@ -19,12 +19,12 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        /* if (Health.currentHealth == 0)
-        {
+         if (Health.currentHealth == 0) 
+         {
             isGameRunning = false;
             Ui.ShowGameOverScreenPanel();
-        }
-        */
+         }
+        
     }
 
     public void OnStartButtonClicked()
