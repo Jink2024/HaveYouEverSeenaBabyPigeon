@@ -40,13 +40,8 @@ public class Launcher : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        GameObject weaponObject =
-            Instantiate(
-                weaponPrefab,
-                weaponHolder
-            );
+        GameObject weaponObject = Instantiate(weaponPrefab, weaponHolder);
 
-        CurrentWeapon =
-            weaponObject.GetComponent<Weapon>();
+        CurrentWeapon = weaponObject.GetComponent<Weapon>();
     }
 }

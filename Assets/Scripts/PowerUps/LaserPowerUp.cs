@@ -4,7 +4,7 @@ using UnityEngine;
 public class LaserPowerUp : PowerUp
 {
     [SerializeField] private GameObject laserGunPrefab;
-
+    protected override float Duration => GameParameters.LaserPowerUpDuration;
     public override IEnumerator Apply(GameObject player)
     {
         Launcher launcher = player.GetComponent<Launcher>();

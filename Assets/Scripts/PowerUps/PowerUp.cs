@@ -4,7 +4,7 @@ using System.Collections;
 
 public abstract class PowerUp : MonoBehaviour
 {
-    public float Duration = 10f;
+    protected virtual float Duration => GameParameters.LaserPowerUpDuration;
 
     public abstract IEnumerator Apply(GameObject player);
 }

@@ -6,17 +6,21 @@ public class PowerUpCrate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Player"))
-            return;
-
-        PowerUpManager manager =
-            other.GetComponent<PowerUpManager>();
-
-        if (manager != null)
+        if (other.CompareTag("SlotTrigger"))
         {
-            manager.ActivatePowerUp(powerUpPrefab);
+            Destroy(gameObject);
+            return;
         }
 
-        Destroy(gameObject);
+        if (other.CompareTag("Player"))
+        {
+            PowerUpManager manager = other.GetComponent<PowerUpManager>();
+
+            if (manager != null)
+            {
+                manager.ActivatePowerUp(powerUpPrefab);
+            }
+            Destroy(gameObject);
+        }
     }
 }
