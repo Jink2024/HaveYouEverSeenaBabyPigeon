@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class GooseBullet : MonoBehaviour
 {
-  private UI ui;
+  public UI Ui;
+  public Health Health;
   
   public void Awake()
   {
-    ui = FindFirstObjectByType<UI>();
+    Ui = FindFirstObjectByType<UI>();
   }
   
-  public void OnTriggerEnter2D(Collider other)
+  public void OnTriggerEnter2D(Collider2D other)
   {
     if (other.CompareTag("SlotTrigger"))
     {
@@ -20,13 +21,14 @@ public class GooseBullet : MonoBehaviour
     if (other.CompareTag("Player"))
     {
       other.GetComponent<Health>().TakeDamage();
-      print("Player got hit");
+      //      Ui.SetHealthText(Ui.healthText.text = $"Health: {Health.currentHealth}");
+      Ui.SetHealthText(Health.HealthAsString());
+
     }
     
     else if (other.CompareTag("DestroyBox"))
     {
       Destroy(gameObject);
-      print("Hit Box");
     }
   }
   

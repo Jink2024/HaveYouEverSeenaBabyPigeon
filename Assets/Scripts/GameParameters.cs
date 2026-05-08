@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class GameParameters
 {
+    
     public static int PlayerMaxHealth = 10;
     
     public static int NumberBirdsOnScreen = 1;

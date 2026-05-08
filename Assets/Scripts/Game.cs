@@ -13,7 +13,7 @@ public class Game : MonoBehaviour
     {
         Ui.HideGameOverScreenPanel();
         Ui.ShowStartScreenPanel();
-        // Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
+        Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
         Ui.ResetHealth();
     }
 

@@ -19,17 +19,17 @@ public class Bullet : MonoBehaviour
         
         if (other.CompareTag("Bird"))
         {
-            PigeonHealth pigeonHealth = other.GetComponent<PigeonHealth>();
+           // PigeonHealth pigeonHealth = other.GetComponent<PigeonHealth>();
             
-            pigeonHealth.TakeDamage();
+           // pigeonHealth.TakeDamage();
             other.GetComponent<SpriteRenderer>().color = Color.red;
             
-            if (pigeonHealth.GetHealth() == 0)
-            {
-                Destroy(other.gameObject);
-            }
+          //  if (pigeonHealth.GetHealth() == 0)
+          //  {
+          //      Destroy(other.gameObject);
+          //  }
             
-            Destroy(gameObject);
+            Destroy(other.gameObject);
             ScoreKeeper.AddPoint();
             ui.SetScoreText(ScoreKeeper.GetScoreAsString());
             print("Bird was hit");
