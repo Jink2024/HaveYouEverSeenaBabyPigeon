@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
     public UI Ui;
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
+    private Health health;
     
     void Start()
     {
@@ -18,7 +19,12 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-        
+        /* if (Health.currentHealth == 0)
+        {
+            isGameRunning = false;
+            Ui.ShowGameOverScreenPanel();
+        }
+        */
     }
 
     public void OnStartButtonClicked()
@@ -55,4 +61,5 @@ public class Game : MonoBehaviour
     {
         return isGameRunning;
     }
+    
 }

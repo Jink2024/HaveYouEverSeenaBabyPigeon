@@ -4,10 +4,11 @@ public class Bullet : MonoBehaviour
 {
     private UI ui;
 
-    public void Awake()
+     public void Awake()
     {
         ui = FindObjectOfType<UI>();
     }
+    
     
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,6 +16,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
         if (other.CompareTag("Bird"))
         {
             PigeonHealth pigeonHealth = other.GetComponent<PigeonHealth>();
@@ -31,6 +33,14 @@ public class Bullet : MonoBehaviour
             ScoreKeeper.AddPoint();
             ui.SetScoreText(ScoreKeeper.GetScoreAsString());
             print("Bird was hit");
+        }
+
+        if (other.CompareTag("Goose"))
+        {
+            Destroy(other.gameObject);
+            ScoreKeeper.AddPoint();
+            ui.SetScoreText(ScoreKeeper.GetScoreAsString());
+            print("Goose was hit");
         }
     }
 }
