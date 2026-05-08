@@ -10,7 +10,7 @@ public class SpecialBirdSpawner : TimedObjectPlacer
     public GameObject OstrichPrefab;
     //public GameObject GoosePrefab;
     
-    private List<GameObject> AvailableSpecialBirdPrefabs;
+    private List<GameObject> AvailableSpecialBirdPrefabs = new();
     
     public void Start()
     {
