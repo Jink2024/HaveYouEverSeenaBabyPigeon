@@ -898,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Launcher
   weaponHolder: {fileID: 250389575}
-  defaultWeaponPrefab: {fileID: 3922717976736465486, guid: c0ad1a76724d9ae4291dffbbe26a8824, type: 3}
+  defaultWeaponPrefab: {fileID: 2327121769062867653, guid: 0e2b14c8f2834ae4eaf7fbe90cae6464, type: 3}
   CurrentWeapon: {fileID: 0}
 --- !u!114 &570051810
 MonoBehaviour:
