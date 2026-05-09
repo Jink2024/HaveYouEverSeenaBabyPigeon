@@ -30,6 +30,12 @@ public class NukePowerUp : PowerUp
         {
             sounds.PlayNukeSound();
         }
+        CameraShake shake = Camera.main.GetComponent<CameraShake>();
+
+        if (shake != null)
+        {
+            shake.Shake(0.4f, 0.5f, 20);
+        }
 
         if (ui != null)
         {
