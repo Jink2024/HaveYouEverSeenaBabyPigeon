@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletGun
   projectilePrefab: {fileID: 6757178336878083107, guid: 01fe816caae227047902ef762863d8ff, type: 3}
   projectileSpawnPoint: {fileID: 8467168344497720881}
+  weaponVisual: {fileID: 8124235077128842059}
 --- !u!1 &8501981108433398885
 GameObject:
   m_ObjectHideFlags: 0

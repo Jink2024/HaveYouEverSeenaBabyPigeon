@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaserGun
   projectilePrefab: {fileID: 3071086577908168297, guid: 7a119a95194cc2f458bf6d08803929d3, type: 3}
   projectileSpawnPoint: {fileID: 7089090708982878702}
+  weaponVisual: {fileID: 1997100485623214978}
 --- !u!1 &9152492054082610803
 GameObject:
   m_ObjectHideFlags: 0
