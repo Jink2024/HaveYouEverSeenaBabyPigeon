@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -589,6 +590,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e03197b65fd544a9832ca522af45e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
 --- !u!1 &542107545
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Launcher
   weaponHolder: {fileID: 250389575}
-  defaultWeaponPrefab: {fileID: 2327121769062867653, guid: 0e2b14c8f2834ae4eaf7fbe90cae6464, type: 3}
+  defaultWeaponPrefab: {fileID: 3922717976736465486, guid: c0ad1a76724d9ae4291dffbbe26a8824, type: 3}
   CurrentWeapon: {fileID: 0}
 --- !u!114 &570051810
 MonoBehaviour:
@@ -2207,7 +2220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44267daaff9a2448b674c2356b27ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sounds
-  GunClip: {fileID: 8300000, guid: 697d453e520dab84b972cc6d4c3f24a4, type: 3}
+  bulletSound: {fileID: 8300000, guid: 697d453e520dab84b972cc6d4c3f24a4, type: 3}
+  laserSound: {fileID: 8300000, guid: a401a11b332142540943f26eb3eab6c0, type: 3}
+  nukeSound: {fileID: 8300000, guid: 814e21569a9d2604290677ba188f42d8, type: 3}
 --- !u!82 &1850336506
 AudioSource:
   m_ObjectHideFlags: 0

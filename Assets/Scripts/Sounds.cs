@@ -2,18 +2,30 @@ using UnityEngine;
 
 public class Sounds : MonoBehaviour
 {
-   public AudioClip GunClip;
-   
    private AudioSource audioSource;
 
-   public void Awake()
+   [SerializeField] private AudioClip bulletSound;
+   [SerializeField] private AudioClip laserSound;
+   [SerializeField] private AudioClip nukeSound;
+   
+   private void Awake()
    {
       audioSource = GetComponent<AudioSource>();
    }
    
-   public void PlayGunSound()
+   public void PlayBulletSound()
    {
-      audioSource.PlayOneShot(GunClip);
+      audioSource.PlayOneShot(bulletSound);
+   }
+
+   public void PlayLaserSound()
+   {
+      audioSource.PlayOneShot(laserSound);
+   }
+
+   public void PlayNukeSound()
+   {
+      audioSource.PlayOneShot(nukeSound);
    }
 
 }

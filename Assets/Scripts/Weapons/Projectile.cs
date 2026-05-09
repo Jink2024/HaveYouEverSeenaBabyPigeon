@@ -11,7 +11,7 @@ public abstract class Projectile : MonoBehaviour
 
     protected virtual void Awake()
     {
-        ui = FindObjectOfType<UI>();
+        ui = FindAnyObjectByType<UI>();
         projectileRigidbody = GetComponent<Rigidbody2D>();
     }
 

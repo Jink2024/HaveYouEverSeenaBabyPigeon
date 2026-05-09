@@ -213,5 +213,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3e3bedb33cc7043be7eaccc57061fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
-  lootPrefab: {fileID: 6632196940697658179, guid: fa81395583dfcdd4695c76288b90f00b, type: 3}
+  lootPrefab: {fileID: 6632196940697658179, guid: 3d60d70b05ae7c34e9fc3b1e4c4049e7, type: 3}
   dropChance: 0.5
