@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7784806044518797723}
   - component: {fileID: -3583024765900378923}
   m_Layer: 0
-  m_Name: LaserPowerUpCrate
+  m_Name: NukePowerUpCrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8787c76749c67434cb91c85890dfc504, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96c7428b0ec146d45b0e088a3fa71387, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1d1422b28988c4fa620cd5832e5aef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerUpCrate
-  powerUpPrefab: {fileID: 3629766762228664432, guid: aa0540bc237cb92408fa81c7f427df71, type: 3}
+  powerUpPrefab: {fileID: 4881090991570906940, guid: 9ebc8e8a07e7e1c459eebb8285bc2065, type: 3}
 --- !u!50 &-3583024765900378923
 Rigidbody2D:
   serializedVersion: 5

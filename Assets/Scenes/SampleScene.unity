@@ -2207,7 +2207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d44267daaff9a2448b674c2356b27ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sounds
-  GunClip: {fileID: 8300000, guid: 697d453e520dab84b972cc6d4c3f24a4, type: 3}
+  bulletSound: {fileID: 8300000, guid: 697d453e520dab84b972cc6d4c3f24a4, type: 3}
+  laserSound: {fileID: 8300000, guid: a401a11b332142540943f26eb3eab6c0, type: 3}
+  nukeSound: {fileID: 8300000, guid: 814e21569a9d2604290677ba188f42d8, type: 3}
 --- !u!82 &1850336506
 AudioSource:
   m_ObjectHideFlags: 0
