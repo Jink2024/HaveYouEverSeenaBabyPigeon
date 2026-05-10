@@ -30,7 +30,7 @@ public class Bird : MonoBehaviour
     {
         if (isLeaving) direction.y = 1;
         FaceCorrectDirection(direction);
-        Vector2 movementAmount = GameParameters.BirdMovementSpeed * direction * Time.deltaTime;
+        Vector2 movementAmount = GameParameters.BirdMovementSpeed * GameParameters.BirdSpeedMultiplier * direction * Time.deltaTime;
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);
         AddScreenConstraints();
     }

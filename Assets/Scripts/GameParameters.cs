@@ -13,6 +13,9 @@ public static class GameParameters
     public static float BirdsMinimumSecondsToWait = 3f;
     public static float BirdsMaximumSecondsToWait = 5f;
     public static float BirdMovementSpeed = 10f;
+    public static float SlowdownMultiplier = 0.5f;
+    public static float BirdSpeedMultiplier = 1f;
+    public static float SlowdownDuration = 8f;
     
     public static float BulletMovementSpeed = 10f;
     public static int BulletDamage = 1;
