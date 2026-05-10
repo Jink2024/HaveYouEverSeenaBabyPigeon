@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    private Dictionary<Type, Coroutine> activePowerUps = new();
+    private class ActivePowerUp
+    {
+        public PowerUp PowerUp;
+        public Coroutine Coroutine;
+    }
+    
+    private Dictionary<Type, ActivePowerUp> activePowerUps = new();
 
     public void ActivatePowerUp(PowerUp powerUpPrefab)
     {
@@ -13,15 +19,19 @@ public class PowerUpManager : MonoBehaviour
 
         Type powerUpType = powerUp.GetType(); // Return the type of powerUp (Laser, Nuke...)
 
-        // If this type is already activated, reset Coroutine countdown
+        // If this type is already activated, destroy this powerUp and stop Coroutine
         if (activePowerUps.ContainsKey(powerUpType))
         {
-            StopCoroutine(activePowerUps[powerUpType]);
+            ActivePowerUp existing = activePowerUps[powerUpType];
+
+            StopCoroutine(existing.Coroutine);
+
+            Destroy(existing.PowerUp.gameObject);
         }
 
         Coroutine coroutine = StartCoroutine(RunPowerUp(powerUp));
 
-        activePowerUps[powerUpType] = coroutine;
+        activePowerUps[powerUpType] = new ActivePowerUp {PowerUp = powerUp, Coroutine = coroutine};
     }
 
     private IEnumerator RunPowerUp(PowerUp powerUp)
