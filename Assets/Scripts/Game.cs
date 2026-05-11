@@ -23,7 +23,6 @@ public class Game : MonoBehaviour
 
     public void OnStartButtonClicked()
     {
-        print("OnStartButtonClicked");
         Ui.HideStartScreenPanel();
         InitializeGame();
     }

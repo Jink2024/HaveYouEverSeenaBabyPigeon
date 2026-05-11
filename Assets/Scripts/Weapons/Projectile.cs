@@ -57,8 +57,7 @@ public abstract class Projectile : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
-            print("Bird was hit");
+      
         }
     }
 }
