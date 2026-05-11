@@ -12,7 +12,7 @@ public class TimedObjectPlacer : MonoBehaviour
     
     private bool isOkToCreate = true;
     public bool isActive = false;
-    private Coroutine countdownCoroutine;
+    public Coroutine countdownCoroutine;
     
     void Update()
     {

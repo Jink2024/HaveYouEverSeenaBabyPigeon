@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
     public TMP_Text healthText;
     public CanvasGroup StartScreenPanelCanvasGroup;
     public CanvasGroup GameOverPanelCanvasGroup;
-    //public Health Health;
+    public CanvasGroup UiPanelCanvasGroup;
     
     public void SetScoreText(string score)
     {
@@ -47,5 +47,15 @@ public class UI : MonoBehaviour
     public void ShowStartScreenPanel()
     {
         CanvasGroupDisplayer.Show(StartScreenPanelCanvasGroup);
+    }
+    
+    public void ShowUiPanel()
+    {
+        CanvasGroupDisplayer.Show(UiPanelCanvasGroup);
+    }
+    
+    public void HideUiPanel()
+    {
+        CanvasGroupDisplayer.Hide(UiPanelCanvasGroup);
     }
 }

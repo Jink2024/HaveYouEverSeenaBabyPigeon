@@ -7,7 +7,9 @@ public class Game : MonoBehaviour
     public UI Ui;
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
-    private Health health;
+    public BirdSpawner GooseSpawner;
+    public PlayerHealth PlayerHealth;
+    public Player Player;
     
     void Start()
     {
@@ -19,43 +21,61 @@ public class Game : MonoBehaviour
 
     void Update()
     {
-         if (Health.currentHealth == 0) 
+         if (PlayerHealth.currentHealth == 0)
          {
-            isGameRunning = false;
-            Ui.ShowGameOverScreenPanel();
+             EndGame();
          }
         
     }
 
+    private void EndGame()
+    {
+        isGameRunning = false;
+        StopPlacers();
+        Ui.ShowGameOverScreenPanel();
+        Ui.HideStartScreenPanel();
+        Ui.HideUiPanel();
+        Player.gameObject.SetActive(false);
+    }
+
     public void OnStartButtonClicked()
     {
-        print("OnStartButtonClicked");
+        StartGame();
+    }
+
+    private void StartGame()
+    {
         Ui.HideStartScreenPanel();
+        Ui.HideGameOverScreenPanel();
+        Ui.ShowUiPanel();
         InitializeGame();
     }
 
     public void OnPlayAgainButtonClicked()
     {
-        Ui.HideGameOverScreenPanel();
-        InitializeGame();
+        StartGame();
     }
 
     public void InitializeGame()
     {
         isGameRunning = true;
         StartPlacers();
+        PlayerHealth.Reset();
         Ui.ResetScore();
         Ui.ResetHealth();
+        Player.gameObject.SetActive(true);
     }
 
     private void StartPlacers()
     {
         BirdSpawner.StartPlacing();
+        GooseSpawner.StartPlacing();
     }
 
     private void StopPlacers()
     {
         BirdSpawner.StopPlacing();
+        GooseSpawner.StopPlacing();
     }
     public bool IsGameRunning()
     {

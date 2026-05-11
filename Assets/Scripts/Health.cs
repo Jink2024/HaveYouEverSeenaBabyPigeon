@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public static int currentHealth;
+    public int currentHealth;
     public int MaxHealth;
     public void Start()
     {
@@ -14,12 +14,12 @@ public class Health : MonoBehaviour
         return currentHealth;
     }
     
-    public void TakeDamage(int damage = 1)
+    public virtual void TakeDamage(int damage = 1)
     {
         currentHealth = currentHealth - damage;
     }
     
-    public static string HealthAsString()
+    public string HealthAsString()
     {
         return currentHealth.ToString();
     }

@@ -10,7 +10,13 @@ public class Pigeon : Bird
     private Transform newRestingPosition;
     private Coroutine restingCountdownCoroutine;
     private const float ArrivalDistance = 0.1f;
+    private Animator animator;
 
+    public void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     public void Update()
     {
         if (isMoving)
@@ -44,7 +50,12 @@ public class Pigeon : Bird
     private void MoveTowardsRestingPosition()
     {
         Vector2 direction = GetMovementDirection();
+        
+        Vector2 movementAmount = direction * (GameParameters.PigeonMovementSpeed * Time.deltaTime);
+
         Move(direction);
+        animator.SetFloat("Horizontal", Mathf.Abs(movementAmount.x));
+
     }
 
     private Vector2 GetMovementDirection()

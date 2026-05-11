@@ -1,18 +1,26 @@
+using System.Collections;
 using UnityEngine;
 
-public class Goose : TimedObjectPlacer
+public class Goose : Bird // TimedObjectPlacer
 {
-    private Bird Bird;
-    
-    void Start()
-    {
-        minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
-        maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
-    }
 
-    // Update is called once per frame
+    private int direction;
+
+    public void Awake()
+    {
+        direction = Random.Range(0, 2);
+    }
+    
     public void Update()
     {
-        //Bird.Move(Vector2.down);
+        switch (direction)
+        {
+            case 0:
+                Move(Vector2.right);
+                break;
+            case 1:
+                Move(Vector2.left);
+                break;
+        }
     }
 }

@@ -19,5 +19,6 @@ public static class GameParameters
 
     public static float PigeonRestTimeInSeconds = 1.5f;
     public static float BirdExistTimeInSeconds = 5f;
-    
+    public static float PigeonMovementSpeed = 3f;
+
 }

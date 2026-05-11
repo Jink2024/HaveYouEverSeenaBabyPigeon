@@ -22,18 +22,20 @@ public class Player : MonoBehaviour
         if (!Game.IsGameRunning())
             return;
         Move(direction);
+        
     }
 
     public void Move(Vector2 direction)
     {
         // Useless for now, could be used later.
-        // FaceCorrectDirection(direction);
+        FaceCorrectDirection(direction);
         
         Vector2 movementAmount = direction * (GameParameters.PlayerMovementSpeed * Time.deltaTime);
         
         spriteRenderer.transform.Translate(movementAmount.x,0,0);
 
         spriteRenderer.transform.position = SpriteTools.ConstrainToScreen(spriteRenderer);
+        animator.SetFloat("Horizontal", Mathf.Abs(movementAmount.x));
     }
     
     private void FaceCorrectDirection(Vector2 direction)
@@ -51,5 +53,10 @@ public class Player : MonoBehaviour
     public Vector3 GetPosition()
     {
         return spriteRenderer.transform.position;
+    }
+
+    public void StopMoving()
+    {
+        animator.SetFloat("Horizontal", 0f);
     }
 }

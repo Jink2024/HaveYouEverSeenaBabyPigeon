@@ -21,9 +21,8 @@ public class GooseBullet : MonoBehaviour
     if (other.CompareTag("Player"))
     {
       Destroy(gameObject);
-      other.GetComponent<Health>().TakeDamage();
       //      Ui.SetHealthText(Ui.healthText.text = $"Health: {Health.currentHealth}");
-      Ui.SetHealthText(Health.HealthAsString());
+      other.GetComponent<PlayerHealth>().TakeDamage();
 
     }
     
