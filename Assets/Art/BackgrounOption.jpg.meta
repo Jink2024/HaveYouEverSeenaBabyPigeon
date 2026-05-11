@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b7351c91079c40be8546e6cf7753d62
+guid: 183b9e3e47fe346098fa2365516b5227
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4924063492758760829
-    second: 427095779_10161662227968598_3382626971511683658_n-2549403315_0
+      213: -7574564021410086719
+    second: OIP-3422634781_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 427095779_10161662227968598_3382626971511683658_n-2549403315_0
+      name: OIP-3422634781_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2048
-        height: 1367
+        width: 474
+        height: 296
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d7dea5968a9c55440800000000000000
-      internalID: 4924063492758760829
+      spriteID: 1c0c56f772eb1e690800000000000000
+      internalID: -7574564021410086719
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      427095779_10161662227968598_3382626971511683658_n-2549403315_0: 4924063492758760829
+      OIP-3422634781_0: -7574564021410086719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

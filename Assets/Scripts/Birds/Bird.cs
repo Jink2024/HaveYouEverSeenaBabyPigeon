@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public class Bird : MonoBehaviour//: TimedObjectPlacer
 {
     private SpriteRenderer spriteRenderer;
     private bool isLeaving = false;

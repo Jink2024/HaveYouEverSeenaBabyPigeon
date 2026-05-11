@@ -13,9 +13,13 @@ public class KeyboardInput : MonoBehaviour
         {
             Player.MoveManually(Vector2.left);
         }
-        if (keyboard.dKey.isPressed)
+        else if (keyboard.dKey.isPressed)
         {
             Player.MoveManually(Vector2.right);
+        }
+        else
+        {
+            Player.StopMoving();
         }
     }
 }

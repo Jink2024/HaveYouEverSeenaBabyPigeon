@@ -14,8 +14,13 @@ public class Health : MonoBehaviour
         return currentHealth;
     }
     
-    public void TakeDamage(int damage = 1)
+    public virtual void TakeDamage(int damage = 1)
     {
-        currentHealth -= damage;
+        currentHealth = currentHealth - damage;
+    }
+    
+    public string HealthAsString()
+    {
+        return currentHealth.ToString();
     }
 }
