@@ -8,8 +8,8 @@ public class Game : MonoBehaviour
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
     public SpecialBirdSpawner SpecialBirdSpawner;
-    private PlayerHealth PlayerHealth;
     public Player Player;
+    private PlayerHealth PlayerHealth;
     
     void Start()
     {
@@ -17,7 +17,8 @@ public class Game : MonoBehaviour
         Ui.HideUiPanel();
         Ui.ShowStartScreenPanel();
         Ui.ResetHealth();
-        if (PlayerHealth.currentHealth == 0)
+        PlayerHealth = Player.GetComponent<PlayerHealth>();
+        if (PlayerHealth.GetHealth() == 0)
         {
             EndGame();
         }
