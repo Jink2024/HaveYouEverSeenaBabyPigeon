@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 public class MouseFacer : MonoBehaviour
 {
     private float _lastValidAngle = 0f;
-    
     void Update()
     {
         if (Mouse.current == null)
@@ -22,7 +21,7 @@ public class MouseFacer : MonoBehaviour
         // rotate the sprite to that angle
         transform.rotation = Quaternion.Euler(0f, 0f, _lastValidAngle);
     }
-
+    
     private float GetAngle()
     {
         Vector3 mouseWorld = GetMouseWorldPosition();
