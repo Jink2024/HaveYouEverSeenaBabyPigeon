@@ -8,8 +8,8 @@ public class Game : MonoBehaviour
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
     public SpecialBirdSpawner SpecialBirdSpawner;
-    public BirdSpawner GooseSpawner;
-    public PlayerHealth PlayerHealth;
+    // public BirdSpawner GooseSpawner;
+    private PlayerHealth PlayerHealth;
     public Player Player;
     
     void Start()
@@ -18,11 +18,12 @@ public class Game : MonoBehaviour
         Ui.ShowStartScreenPanel();
         Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
         Ui.ResetHealth();
+        PlayerHealth = Player.GetComponent<PlayerHealth>();
     }
 
     void Update()
     {
-         if (PlayerHealth.currentHealth == 0)
+         if (PlayerHealth.GetHealth() == 0)
          {
              EndGame();
          }
@@ -71,14 +72,14 @@ public class Game : MonoBehaviour
     {
         BirdSpawner.StartPlacing();
         SpecialBirdSpawner.StartPlacing();
-        GooseSpawner.StartPlacing();
+        // GooseSpawner.StartPlacing();
     }
 
     private void StopPlacers()
     {
         BirdSpawner.StopPlacing();
         SpecialBirdSpawner.StopPlacing();
-        GooseSpawner.StopPlacing();
+        // GooseSpawner.StopPlacing();
     }
     public bool IsGameRunning()
     {

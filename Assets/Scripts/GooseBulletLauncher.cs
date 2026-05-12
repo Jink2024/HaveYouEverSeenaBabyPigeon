@@ -47,7 +47,7 @@ public class GooseBulletLauncher : MonoBehaviour
         // Launch in that direction
         Launcher.Launch(aimDirection);
         
-        Sounds.PlayGunSound();
+        Sounds.PlayBulletSound();
     }
 
     private Vector2 GetAimDirection()

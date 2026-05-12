@@ -8,7 +8,7 @@ public class SpecialBirdSpawner : TimedObjectPlacer
     public GameObject PenguinPrefab;
     public GameObject HummingbirdPrefab;
     public GameObject OstrichPrefab;
-    //public GameObject GoosePrefab;
+    public GameObject GoosePrefab;
     
     private List<GameObject> AvailableSpecialBirdPrefabs = new();
     
@@ -16,6 +16,12 @@ public class SpecialBirdSpawner : TimedObjectPlacer
     {
         minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
         maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
+        
+        AvailableSpecialBirdPrefabs.Add(RealPigeonPrefab);
+        AvailableSpecialBirdPrefabs.Add(PenguinPrefab);
+        AvailableSpecialBirdPrefabs.Add(HummingbirdPrefab);
+        AvailableSpecialBirdPrefabs.Add(OstrichPrefab);
+        AvailableSpecialBirdPrefabs.Add(GoosePrefab);
     }
 
     public override void Update()
@@ -59,10 +65,10 @@ public class SpecialBirdSpawner : TimedObjectPlacer
         Instantiate(Prefab, Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 10)), Quaternion.identity);
     }
 
-    // private void GoosePlace()
-    // {
-    //     Instantiate(Prefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
-    // }
+    private void GoosePlace()
+    { 
+        Instantiate(Prefab, SpawnTools.RandomLocationWorldSpace(), Quaternion.identity);
+    }
 
     public void UpdateAvailableSpecialBirds(int difficulty)
     {
@@ -80,9 +86,9 @@ public class SpecialBirdSpawner : TimedObjectPlacer
             case 4:
                 AvailableSpecialBirdPrefabs.Add(OstrichPrefab);
                 break;
-            // case 5:
-            //     AvailableSpecialBirdPrefabs.Add(GoosePrefab);
-            //     break;
+            case 5:
+                 AvailableSpecialBirdPrefabs.Add(GoosePrefab);
+                 break;
             default:
                 AvailableSpecialBirdPrefabs.Clear();
                 break;
