@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 9010555753474809314}
   - component: {fileID: 1848256628265239943}
   - component: {fileID: 4723334901695018764}
+  - component: {fileID: -5246963744272065822}
   m_Layer: 0
   m_Name: Ostrich
   m_TagString: Bird
@@ -194,3 +195,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OstrichHealth
   currentHealth: 0
   MaxHealth: 0
+--- !u!114 &-5246963744272065822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3553860153383404590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3e3bedb33cc7043be7eaccc57061fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
+  lootPrefab: {fileID: 6632196940697658179, guid: 8c7fa0dffb2d34042af0c5004656069e, type: 3}
+  dropChance: 0.5
