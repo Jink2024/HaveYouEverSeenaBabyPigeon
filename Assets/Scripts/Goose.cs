@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Goose : Bird // TimedObjectPlacer
+public class Goose : Bird
 {
 
     private int direction;

@@ -16,7 +16,7 @@ public class UI : MonoBehaviour
 
     public void SetHealthText(string health)
     {
-        healthText.text = $"Health: {health}/10";
+        //healthText.text = $"Health: {health}/10";
     }
 
     public void ResetHealth()
