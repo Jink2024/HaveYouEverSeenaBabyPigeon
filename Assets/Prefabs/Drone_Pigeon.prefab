@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3962661793126291653}
   - component: {fileID: 947746064146706480}
   - component: {fileID: -1006115780888770925}
+  - component: {fileID: -4311327963672451187}
   m_Layer: 0
   m_Name: Drone_Pigeon
   m_TagString: Bird
@@ -223,3 +224,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-4311327963672451187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532720771021030234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3e3bedb33cc7043be7eaccc57061fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
+  lootPrefab: {fileID: 6632196940697658179, guid: fa81395583dfcdd4695c76288b90f00b, type: 3}
+  dropChance: 1

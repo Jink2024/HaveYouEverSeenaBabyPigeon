@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 6483391644560255782}
   - component: {fileID: 8904411241137677972}
   - component: {fileID: 3962661793126291653}
+  - component: {fileID: -6609631037607850117}
   - component: {fileID: 947746064146706480}
+  - component: {fileID: 935134324006572421}
   m_Layer: 0
   m_Name: Real_Pigeon
   m_TagString: Bird
@@ -101,7 +103,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.74, y: 3.16}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 4.74, y: 3.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,7 +160,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: c2112c047710e4fd2b74d0d57cb33c99, type: 3}
+  m_Sprite: {fileID: -2704476663543095490, guid: 187a81efc2ced43009b5ad118ee090ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -186,6 +188,20 @@ MonoBehaviour:
   - {fileID: 2601193771736826596, guid: c544b384b0d2b43319bc4f9b29921176, type: 3}
   - {fileID: 1909973424995087698, guid: c902bdcabd6bb41829bee128ccf43a12, type: 3}
   - {fileID: 1840058516975463235, guid: 5976e1f8229094fe9acbf01dd15eb5d6, type: 3}
+--- !u!114 &-6609631037607850117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532720771021030234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3e3bedb33cc7043be7eaccc57061fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
+  lootPrefab: {fileID: 6632196940697658179, guid: fa81395583dfcdd4695c76288b90f00b, type: 3}
+  dropChance: 0.5
 --- !u!114 &947746064146706480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +216,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
   currentHealth: 0
   MaxHealth: 0
+--- !u!95 &935134324006572421
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532720771021030234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e1242075586a47b3982d1ef8fb23f87, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

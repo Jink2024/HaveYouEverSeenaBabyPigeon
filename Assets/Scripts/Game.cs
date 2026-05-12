@@ -12,13 +12,17 @@ public class Game : MonoBehaviour
     private PlayerHealth PlayerHealth;
     public Player Player;
     
+    private void Awake()
+    {
+        PlayerHealth = FindObjectOfType<PlayerHealth>();
+    }
+    
     void Start()
     {
         Ui.HideGameOverScreenPanel();
         Ui.ShowStartScreenPanel();
         Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
         Ui.ResetHealth();
-        PlayerHealth = Player.GetComponent<PlayerHealth>();
     }
 
     void Update()
