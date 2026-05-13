@@ -41,7 +41,27 @@ public class Game : MonoBehaviour
 
     private void IncreaseDifficulty()
     {
-        difficulty++;
+        if (ScoreKeeper.GetScore() >= 50)
+        {
+            difficulty = 5;
+        }
+        else if (ScoreKeeper.GetScore() >= 40)
+        {
+            difficulty = 4;
+        }
+        else if (ScoreKeeper.GetScore() >= 30)
+        {
+            difficulty = 3;
+        }
+        else if (ScoreKeeper.GetScore() >= 20)
+        {
+            difficulty = 2;
+        }
+        else if (ScoreKeeper.GetScore() >= 10)
+        {
+            difficulty = 1;
+        }
+        else difficulty = 0;
         SpecialBirdSpawner.UpdateAvailableSpecialBirds(difficulty);
         print("Increase difficulty: " + difficulty);
     }
