@@ -38,20 +38,6 @@ public abstract class Projectile : MonoBehaviour
                 return;
 
             health.TakeDamage(Damage);
-            other.GetComponent<SpriteRenderer>().color = Color.red;
-            
-            if (health.GetHealth() <= 0)
-            {
-                BirdLoot birdLoot = other.GetComponent<BirdLoot>();
-                if (birdLoot != null)
-                {
-                    birdLoot.DropLoot();
-                }
-                
-                Destroy(other.gameObject);
-                ScoreKeeper.AddPoint();
-                ui.SetScoreText(ScoreKeeper.GetScoreAsString());
-            }
             
             if (DestroyOnBirdHit)
             {
