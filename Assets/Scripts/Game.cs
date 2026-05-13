@@ -8,9 +8,10 @@ public class Game : MonoBehaviour
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
     public SpecialBirdSpawner SpecialBirdSpawner;
-    // public BirdSpawner GooseSpawner;
     private PlayerHealth PlayerHealth;
     public Player Player;
+
+    private int difficulty = 0;
     
     private void Awake()
     {
@@ -31,7 +32,18 @@ public class Game : MonoBehaviour
          {
              EndGame();
          }
-        
+
+         if (ScoreKeeper.GetScore() % 10 == 0 && ScoreKeeper.GetScore() >= 10 && difficulty < 5)
+         {
+             IncreaseDifficulty();
+         }
+    }
+
+    private void IncreaseDifficulty()
+    {
+        difficulty++;
+        SpecialBirdSpawner.UpdateAvailableSpecialBirds(difficulty);
+        print("Increase difficulty: " + difficulty);
     }
 
     private void EndGame()
@@ -51,6 +63,7 @@ public class Game : MonoBehaviour
 
     private void StartGame()
     {
+        difficulty = 0;
         Ui.HideStartScreenPanel();
         Ui.HideGameOverScreenPanel();
         Ui.ShowUiPanel();
@@ -76,14 +89,12 @@ public class Game : MonoBehaviour
     {
         BirdSpawner.StartPlacing();
         SpecialBirdSpawner.StartPlacing();
-        // GooseSpawner.StartPlacing();
     }
 
     private void StopPlacers()
     {
         BirdSpawner.StopPlacing();
         SpecialBirdSpawner.StopPlacing();
-        // GooseSpawner.StopPlacing();
     }
     public bool IsGameRunning()
     {

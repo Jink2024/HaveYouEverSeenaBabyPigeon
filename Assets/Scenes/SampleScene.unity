@@ -1252,6 +1252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   currentHealth: 0
   MaxHealth: 0
+  SpecialBirdSpawner: {fileID: 2069874989}
   Ui: {fileID: 197762059}
 --- !u!1 &619394800
 GameObject:

@@ -16,12 +16,6 @@ public class SpecialBirdSpawner : TimedObjectPlacer
     {
         minimumSecondsToWait = GameParameters.BirdsMinimumSecondsToWait;
         maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
-        
-        AvailableSpecialBirdPrefabs.Add(RealPigeonPrefab);
-        AvailableSpecialBirdPrefabs.Add(PenguinPrefab);
-        AvailableSpecialBirdPrefabs.Add(HummingbirdPrefab);
-        AvailableSpecialBirdPrefabs.Add(OstrichPrefab);
-        AvailableSpecialBirdPrefabs.Add(GoosePrefab);
     }
 
     public override void Update()
