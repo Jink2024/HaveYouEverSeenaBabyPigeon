@@ -1348,7 +1348,7 @@ GameObject:
   - component: {fileID: 667549988}
   - component: {fileID: 667549989}
   m_Layer: 0
-  m_Name: 427095779_10161662227968598_3382626971511683658_n-2549403315
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,8 +1363,8 @@ Transform:
   m_GameObject: {fileID: 667549987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -338.2378, y: -128.4976, z: 0}
-  m_LocalScale: {x: 3.758729, y: 3.5655406, z: 1.36}
+  m_LocalPosition: {x: -338.2634, y: -128.4899, z: 0}
+  m_LocalScale: {x: 2.4916275, y: 2.6803288, z: 1.36}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2019056149}
@@ -1418,12 +1418,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7574564021410086719, guid: 183b9e3e47fe346098fa2365516b5227, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: db8bbfef95d28486b995276ca4b1997e, type: 3}
+  m_Color: {r: 0.9339623, g: 0.885502, b: 0.885502, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.74, y: 2.96}
+  m_Size: {x: 7.36, y: 3.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

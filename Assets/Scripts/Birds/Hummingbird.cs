@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Hummingbird : Bird
 {
+    public Animator animator;
     private int randomMoveCounter = 0;
     private int lastRandomDirection;
 

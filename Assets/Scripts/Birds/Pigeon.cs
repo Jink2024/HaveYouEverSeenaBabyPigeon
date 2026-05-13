@@ -76,6 +76,7 @@ public class Pigeon : Bird
     private IEnumerator RestingCountdown()
     {
         isMoving = false;
+        animator.SetFloat("Horizontal", Mathf.Abs(0f));
         yield return new WaitForSeconds(GameParameters.PigeonRestTimeInSeconds);
         isMoving = true;
         newRestingPosition = GetRandomRestingPositionLocation();

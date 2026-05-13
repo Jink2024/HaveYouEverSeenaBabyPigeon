@@ -20,6 +20,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         Ui.HideGameOverScreenPanel();
+        Ui.HideUiPanel();
         Ui.ShowStartScreenPanel();
         Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
         Ui.ResetHealth();
@@ -31,7 +32,6 @@ public class Game : MonoBehaviour
          {
              EndGame();
          }
-        
     }
 
     private void EndGame()
