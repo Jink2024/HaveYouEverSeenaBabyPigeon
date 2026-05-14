@@ -58,5 +58,6 @@ public class Player : MonoBehaviour
     public void StopMoving()
     {
         animator.SetFloat("Horizontal", 0f);
+        
     }
 }
