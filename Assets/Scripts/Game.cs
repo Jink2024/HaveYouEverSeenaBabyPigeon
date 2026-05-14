@@ -41,7 +41,7 @@ public class Game : MonoBehaviour
         Ui.ShowGameOverScreenPanel();
         Ui.HideStartScreenPanel();
         Ui.HideUiPanel();
-        Player.gameObject.SetActive(false);
+        //Player.gameObject.SetActive(false);
     }
 
     public void OnStartButtonClicked()
@@ -51,10 +51,10 @@ public class Game : MonoBehaviour
 
     private void StartGame()
     {
+        InitializeGame();
         Ui.HideStartScreenPanel();
         Ui.HideGameOverScreenPanel();
         Ui.ShowUiPanel();
-        InitializeGame();
     }
 
     public void OnPlayAgainButtonClicked()
@@ -65,11 +65,12 @@ public class Game : MonoBehaviour
     public void InitializeGame()
     {
         isGameRunning = true;
+        Player.transform.position = new Vector3(0.41f, -3.8f, 0f);
         StartPlacers();
         PlayerHealth.Reset();
         Ui.ResetScore();
         Ui.ResetHealth();
-        Player.gameObject.SetActive(true);
+        //Player.gameObject.SetActive(true);
     }
 
     private void StartPlacers()
