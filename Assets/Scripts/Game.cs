@@ -8,9 +8,10 @@ public class Game : MonoBehaviour
     private bool isGameRunning = false;
     public BirdSpawner BirdSpawner;
     public SpecialBirdSpawner SpecialBirdSpawner;
-    // public BirdSpawner GooseSpawner;
     private PlayerHealth PlayerHealth;
     public Player Player;
+
+    private int difficulty = 0;
     
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         Ui.HideGameOverScreenPanel();
+        Ui.HideUiPanel();
         Ui.ShowStartScreenPanel();
         Ui.SetScoreText("Score: " + ScoreKeeper.GetScore());
         Ui.ResetHealth();
@@ -31,7 +33,38 @@ public class Game : MonoBehaviour
          {
              EndGame();
          }
-        
+
+         if (ScoreKeeper.GetScore() % 10 == 0 && ScoreKeeper.GetScore() >= 10)
+         {
+             IncreaseDifficulty();
+         }
+    }
+
+    private void IncreaseDifficulty()
+    {
+        if (ScoreKeeper.GetScore() >= 50)
+        {
+            difficulty = 5;
+        }
+        else if (ScoreKeeper.GetScore() >= 40)
+        {
+            difficulty = 4;
+        }
+        else if (ScoreKeeper.GetScore() >= 30)
+        {
+            difficulty = 3;
+        }
+        else if (ScoreKeeper.GetScore() >= 20)
+        {
+            difficulty = 2;
+        }
+        else if (ScoreKeeper.GetScore() >= 10)
+        {
+            difficulty = 1;
+        }
+        else difficulty = 0;
+        SpecialBirdSpawner.UpdateAvailableSpecialBirds(difficulty);
+        print("Increase difficulty: " + difficulty);
     }
 
     private void EndGame()
@@ -41,7 +74,7 @@ public class Game : MonoBehaviour
         Ui.ShowGameOverScreenPanel();
         Ui.HideStartScreenPanel();
         Ui.HideUiPanel();
-        Player.gameObject.SetActive(false);
+        //Player.gameObject.SetActive(false);
     }
 
     public void OnStartButtonClicked()
@@ -51,10 +84,11 @@ public class Game : MonoBehaviour
 
     private void StartGame()
     {
+        difficulty = 0;
+        InitializeGame();
         Ui.HideStartScreenPanel();
         Ui.HideGameOverScreenPanel();
         Ui.ShowUiPanel();
-        InitializeGame();
     }
 
     public void OnPlayAgainButtonClicked()
@@ -65,25 +99,24 @@ public class Game : MonoBehaviour
     public void InitializeGame()
     {
         isGameRunning = true;
+        Player.transform.position = new Vector3(0.41f, -3.8f, 0f);
         StartPlacers();
         PlayerHealth.Reset();
         Ui.ResetScore();
         Ui.ResetHealth();
-        Player.gameObject.SetActive(true);
+        //Player.gameObject.SetActive(true);
     }
 
     private void StartPlacers()
     {
         BirdSpawner.StartPlacing();
         SpecialBirdSpawner.StartPlacing();
-        // GooseSpawner.StartPlacing();
     }
 
     private void StopPlacers()
     {
         BirdSpawner.StopPlacing();
         SpecialBirdSpawner.StopPlacing();
-        // GooseSpawner.StopPlacing();
     }
     public bool IsGameRunning()
     {

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Penguin : Bird
 {
+    public Animator animator;
     private int direction;
 
     public void Awake()

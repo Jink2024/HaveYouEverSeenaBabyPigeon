@@ -57,6 +57,12 @@ public class Player : MonoBehaviour
 
     public void StopMoving()
     {
+        if (!Game.IsGameRunning())
+        {
+            return;
+        }
+
         animator.SetFloat("Horizontal", 0f);
+        
     }
 }
