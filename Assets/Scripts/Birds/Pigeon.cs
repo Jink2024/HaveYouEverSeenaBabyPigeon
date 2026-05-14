@@ -55,6 +55,7 @@ public class Pigeon : Bird
 
         Move(direction);
         animator.SetFloat("Horizontal", Mathf.Abs(movementAmount.x));
+        animator.SetFloat("Vertical", Mathf.Abs(movementAmount.y));
 
     }
 
@@ -76,6 +77,8 @@ public class Pigeon : Bird
     private IEnumerator RestingCountdown()
     {
         isMoving = false;
+        animator.SetFloat("Horizontal", Mathf.Abs(0f));
+        animator.SetFloat("Vertical", Mathf.Abs(0f));
         yield return new WaitForSeconds(GameParameters.PigeonRestTimeInSeconds);
         isMoving = true;
         newRestingPosition = GetRandomRestingPositionLocation();

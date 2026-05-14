@@ -71,8 +71,8 @@ public class Health : MonoBehaviour
             {
                 ui.SetScoreText(ScoreKeeper.GetScoreAsString());
             }
+            
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }

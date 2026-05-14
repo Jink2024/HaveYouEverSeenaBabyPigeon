@@ -17,4 +17,5 @@ public class BirdSpawner : TimedObjectPlacer
         maximumSecondsToWait = GameParameters.BirdsMaximumSecondsToWait;
     }
     
+    
 }
