@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PigeonHealth
   currentHealth: 0
   MaxHealth: 0
+  deathEffectPrefab: {fileID: 4648155358515298778, guid: 823c81fe5b3b2ab40ad6cf82f079a5d5, type: 3}
 --- !u!95 &-1006115780888770925
 Animator:
   serializedVersion: 7
@@ -237,4 +238,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BirdLoot
   lootPrefab: {fileID: 6632196940697658179, guid: 3d60d70b05ae7c34e9fc3b1e4c4049e7, type: 3}
-  dropChance: 1
+  dropChance: 0.5

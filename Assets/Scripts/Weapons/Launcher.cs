@@ -30,7 +30,6 @@ public class Launcher : MonoBehaviour
     
     private bool CanFire()
     {
-        Debug.Log(CurrentWeapon.FireCooldown);
         return Time.time >= _lastFireTime + CurrentWeapon.FireCooldown;
     }
     

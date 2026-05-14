@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public int MaxHealth;
     private UI ui;
+    [SerializeField] private GameObject deathEffectPrefab;
+    
     public void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -58,6 +60,18 @@ public class Health : MonoBehaviour
     {
         if (CompareTag("Bird"))
         {
+            if (deathEffectPrefab != null)
+            {
+                GameObject effect =
+                    Instantiate(
+                        deathEffectPrefab,
+                        transform.position,
+                        Quaternion.identity
+                    );
+
+                Destroy(effect, 2f);
+            }
+            
             BirdLoot birdLoot = GetComponent<BirdLoot>();
 
             if (birdLoot != null)
