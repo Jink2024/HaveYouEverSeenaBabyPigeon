@@ -52,7 +52,7 @@ public class SpecialBirdSpawner : TimedObjectPlacer
         else if (Prefab == PenguinPrefab) PenguinPlace();
         else if (Prefab == HummingbirdPrefab) Place();
         else if (Prefab == OstrichPrefab) OstrichPlace();
-        // else if (Prefab == GoosePrefab) GoosePlace();
+        else if (Prefab == GoosePrefab) GoosePlace();
     }
 
     private void OstrichPlace()

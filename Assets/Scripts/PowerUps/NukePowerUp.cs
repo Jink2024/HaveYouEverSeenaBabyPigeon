@@ -4,12 +4,10 @@ using UnityEngine;
 public class NukePowerUp : PowerUp
 {
     private Sounds sounds;
-    private UI ui;
     
     private void Awake()
     {
         sounds = FindAnyObjectByType<Sounds>();
-        ui = FindAnyObjectByType<UI>();
     }
     
     public override IEnumerator Apply(GameObject player)
@@ -21,9 +19,12 @@ public class NukePowerUp : PowerUp
             if (bird == null)
                 continue;
 
-            Destroy(bird);
+            Health health = bird.GetComponent<Health>();
 
-            ScoreKeeper.AddPoint();
+            if (health != null)
+            {
+                health.Die();
+            }
         }
         
         if (sounds != null)
@@ -35,11 +36,6 @@ public class NukePowerUp : PowerUp
         if (shake != null)
         {
             shake.Shake(0.4f, 0.5f, 20);
-        }
-
-        if (ui != null)
-        {
-            ui.SetScoreText(ScoreKeeper.GetScoreAsString());
         }
         
         yield break;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8124235077128842059}
   - component: {fileID: 5221961018249786913}
   - component: {fileID: 6401828769859137099}
-  - component: {fileID: 839406284410407837}
+  - component: {fileID: -629024031636396921}
   m_Layer: 0
   m_Name: GooseBulletGun
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8467168344497720881}
@@ -106,10 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af172677f521d496eaa682abcbb883b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GooseBulletLauncher
-  Launcher: {fileID: 0}
-  Sounds: {fileID: 0}
-  Game: {fileID: 0}
---- !u!114 &839406284410407837
+--- !u!114 &-629024031636396921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,10 +115,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2327121769062867653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbe9fd84448fd5c4eb199e74ea9d8748, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e97475d1b2abd47b2f90b9ddbe3486, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletGun
-  projectilePrefab: {fileID: 6757178336878083107, guid: 01fe816caae227047902ef762863d8ff, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::GooseGun
+  projectilePrefab: {fileID: 6757178336878083107, guid: 70f39e0f2799140ddb1e73de4752a380, type: 3}
   projectileSpawnPoint: {fileID: 8467168344497720881}
   weaponVisual: {fileID: 8124235077128842059}
 --- !u!1 &8501981108433398885
