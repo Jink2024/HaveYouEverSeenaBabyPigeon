@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
              EndGame();
          }
 
-         if (ScoreKeeper.GetScore() % 10 == 0 && ScoreKeeper.GetScore() >= 10 && difficulty < 5)
+         if (ScoreKeeper.GetScore() % 10 == 0 && ScoreKeeper.GetScore() >= 10)
          {
              IncreaseDifficulty();
          }
