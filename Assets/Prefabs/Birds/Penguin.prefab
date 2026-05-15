@@ -182,6 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3890df7e6394e73abea801d7aa26c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Penguin
+  animator: {fileID: 0}
 --- !u!114 &-4760923732576638916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PenguinHealth
   currentHealth: 0
   MaxHealth: 0
+  deathEffectPrefab: {fileID: 1267984077292624567, guid: 4df76dbbf190bc3438e8c8c0d93556e2, type: 3}
 --- !u!114 &-2070664654448947648
 MonoBehaviour:
   m_ObjectHideFlags: 0

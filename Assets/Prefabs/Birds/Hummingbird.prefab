@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb529fc1016e043bfac1705fc8d03e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hummingbird
+  animator: {fileID: 0}
 --- !u!114 &3290742600803568745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HummingbirdHealth
   currentHealth: 0
   MaxHealth: 0
+  deathEffectPrefab: {fileID: 1267984077292624567, guid: 4df76dbbf190bc3438e8c8c0d93556e2, type: 3}
 --- !u!95 &7611998222166684071
 Animator:
   serializedVersion: 7

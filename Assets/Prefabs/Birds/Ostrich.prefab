@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OstrichHealth
   currentHealth: 0
   MaxHealth: 0
+  deathEffectPrefab: {fileID: 1267984077292624567, guid: 4df76dbbf190bc3438e8c8c0d93556e2, type: 3}
 --- !u!114 &-5246963744272065822
 MonoBehaviour:
   m_ObjectHideFlags: 0

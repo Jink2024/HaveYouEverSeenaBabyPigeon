@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GooseHealth
   currentHealth: 0
   MaxHealth: 0
-  deathEffectPrefab: {fileID: 0}
+  deathEffectPrefab: {fileID: 3828528190977919383}
 --- !u!95 &739370159422831102
 Animator:
   serializedVersion: 7
