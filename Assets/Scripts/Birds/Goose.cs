@@ -5,7 +5,7 @@ public class Goose : Bird // TimedObjectPlacer
 {
 
     private int direction;
-
+    protected override float MovementSpeed => GameParameters.GooseMovementSpeed;
     public void Awake()
     {
         direction = Random.Range(0, 2);

@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
 
-public class Bird : MonoBehaviour//: TimedObjectPlacer
+public class Bird : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private bool isLeaving = false;
+    protected virtual float MovementSpeed => GameParameters.BirdMovementSpeed;
 
     public void Start()
     {
@@ -30,7 +31,7 @@ public class Bird : MonoBehaviour//: TimedObjectPlacer
     {
         if (isLeaving) direction.y = 1;
         FaceCorrectDirection(direction);
-        Vector2 movementAmount = GameParameters.BirdMovementSpeed * GameParameters.BirdSpeedMultiplier * direction * Time.deltaTime;
+        Vector2 movementAmount = MovementSpeed * GameParameters.BirdSpeedMultiplier * direction * Time.deltaTime;
         spriteRenderer.transform.Translate(movementAmount.x, movementAmount.y, 0);
         AddScreenConstraints();
     }

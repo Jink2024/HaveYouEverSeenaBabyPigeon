@@ -6,12 +6,14 @@ public class GooseLauncher : MonoBehaviour
 
     private Player player;
     private Game game;
-
+    [SerializeField] private float attackDelay = 2f;
+    private float spawnTime;
     private void Awake()
     {
         launcher = GetComponentInParent<Launcher>();
         player = FindAnyObjectByType<Player>();
         game = FindAnyObjectByType<Game>();
+        spawnTime = Time.time;
     }
 
     private void Update()
@@ -23,6 +25,9 @@ public class GooseLauncher : MonoBehaviour
             return;
 
         AimAtPlayer();
+        
+        if (Time.time < spawnTime + attackDelay)
+            return;
 
         launcher.Launch(GetAimDirection());
     }

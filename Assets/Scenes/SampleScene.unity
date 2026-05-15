@@ -395,7 +395,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -10.61
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.y
@@ -435,11 +435,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2169968840647873586, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_Size.y
-      value: 15.500507
+      value: 17.499338
       objectReference: {fileID: 0}
     - target: {fileID: 2169968840647873586, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_Offset.y
-      value: 1.3994353
+      value: 0.40001965
       objectReference: {fileID: 0}
     - target: {fileID: 3242529540997433488, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_Name
@@ -1343,11 +1343,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -6.22
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1507,7 +1507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 7.27
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1710,7 +1710,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12
+      value: 10.72
       objectReference: {fileID: 0}
     - target: {fileID: 212384656602680719, guid: 39756cbe0d1133e46ab9f224973fd772, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf5d0418d58a4cfabcbcbf7c04fa301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpecialBirdSpawner
-  Prefab: {fileID: 0}
+  Prefab: {fileID: 3532720771021030234, guid: f4c0b49d1e675a74080ef85f4585a36a, type: 3}
   minimumSecondsToWait: 0
   maximumSecondsToWait: 0
   isOkToCreate: 1
